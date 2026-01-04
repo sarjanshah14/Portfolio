@@ -1,45 +1,39 @@
 const config = {
-  title: "Naresh Khatri | Full-Stack Developer",
+  title: "Sarjan Shah | Software Developer",
   description: {
-    long: "Explore the portfolio of Naresh, a full-stack developer and creative technologist specializing in interactive web experiences, 3D animations, and innovative projects. Discover my latest work, including Coding Ducks, The Booking Desk, Ghostchat, and more. Let's build something amazing together!",
+    long: "Portfolio of Sarjan Shah, a software developer specializing in building modern web applications and innovative software solutions. Explore my projects and experience in software development.",
     short:
-      "Discover the portfolio of Naresh, a full-stack developer creating interactive web experiences and innovative projects.",
+      "Portfolio of Sarjan Shah, a software developer creating modern web applications and software solutions.",
   },
   keywords: [
-    "Naresh",
+    "Sarjan Shah",
     "portfolio",
-    "full-stack developer",
-    "creative technologist",
+    "software developer",
     "web development",
-    "3D animations",
-    "interactive websites",
-    "Coding Ducks",
-    "The Booking Desk",
-    "Ghostchat",
-    "web design",
-    "GSAP",
+    "software engineering",
+    "programming",
     "React",
     "Next.js",
-    "Spline",
-    "Framer Motion",
+    "web applications",
+    "full-stack development",
   ],
-  author: "Naresh Khatri",
-  email: "naresh.khatri2345@gmail.com",
+  author: "Sarjan Shah",
+  email: "shahsarjan968@gmail.com",
   site: "https://nareshkhatri.site",
 
   // for github stars button
-  githubUsername: "naresh-khatri",
+  githubUsername: "sarjanshah14",
   githubRepo: "3d-portfolio",
 
   get ogImg() {
     return this.site + "/assets/seo/og-image.png";
   },
   social: {
-    twitter: "https://x.com/nothotchaddi",
-    linkedin: "https://www.linkedin.com/in/naresh-khatri/",
-    instagram: "https://www.instagram.com/hotchaddi",
-    facebook: "https://www.facebook.com/HotChaddi/",
-    github: "https://github.com/Naresh-Khatri",
+    twitter: "",
+    linkedin: "",
+    instagram: "",
+    facebook: "",
+    github: "https://github.com/sarjanshah14",
   },
 };
 export { config };
