@@ -80,14 +80,22 @@ export const ModalBody = ({
   useEffect(() => {
     if (open) {
       document.body.style.overflow = "hidden";
+      document.body.classList.add("overflow-hidden");
+      window.dispatchEvent(new CustomEvent("stop-lenis"));
     } else {
       document.body.style.overflow = "auto";
+      document.body.classList.remove("overflow-hidden");
+      window.dispatchEvent(new CustomEvent("start-lenis"));
     }
   }, [open]);
 
   const modalRef = useRef(null);
   const { setOpen } = useModal();
-  useOutsideClick(modalRef, () => setOpen(false));
+  /* 
+    User requested to DISABLE closing on outside click. 
+    Only close on explicit "X" or Cancel button.
+  */
+  // useOutsideClick(modalRef, () => setOpen(false));
 
   return (
     <AnimatePresence>
@@ -197,7 +205,6 @@ const Overlay = ({ className }: { className?: string }) => {
         backdropFilter: "blur(0px)",
       }}
       className={`modal-overlay fixed inset-0 h-full w-full bg-black bg-opacity-50 z-50 ${className}`}
-      onClick={() => setOpen(false)}
     ></motion.div>
   );
 };

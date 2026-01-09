@@ -9,22 +9,31 @@ interface LenisProps {
 }
 
 function SmoothScroll({ children, isInsideModal = false }: LenisProps) {
-  const lenis = useLenis(({ scroll }) => {
-    // called every scroll
-  });
+  const lenisRef = React.useRef<any>(null);
 
   useEffect(() => {
-    document.addEventListener("DOMContentLoaded", () => {
-      lenis?.stop();
-      lenis?.start();
-    });
+    const stopLenis = () => {
+      lenisRef.current?.lenis?.stop();
+    };
+    const startLenis = () => {
+      lenisRef.current?.lenis?.start();
+    };
+
+    window.addEventListener("stop-lenis", stopLenis);
+    window.addEventListener("start-lenis", startLenis);
+
+    return () => {
+      window.removeEventListener("stop-lenis", stopLenis);
+      window.removeEventListener("start-lenis", startLenis);
+    };
   }, []);
 
   return (
     <ReactLenis
+      ref={lenisRef}
       root
       options={{
-        duration: 2,
+        duration: 1.2,
         prevent: (node) => {
           if (isInsideModal) return true;
           const modalOpen = node.classList.contains("modall");
