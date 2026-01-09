@@ -97,4 +97,12 @@ body {
   .canvas-overlay-mode svg {
     pointer-events: auto;
   }
+
+  .modal-open-pointer-block {
+    pointer-events: none !important;
+  }
+
+  .modal-open-pointer-block .modall {
+    pointer-events: auto !important;
+  }
 }

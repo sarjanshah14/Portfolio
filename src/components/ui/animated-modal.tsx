@@ -81,10 +81,12 @@ export const ModalBody = ({
     if (open) {
       document.body.style.overflow = "hidden";
       document.body.classList.add("overflow-hidden");
+      document.body.classList.add("modal-open-pointer-block"); // Block background hovering
       window.dispatchEvent(new CustomEvent("stop-lenis"));
     } else {
       document.body.style.overflow = "auto";
       document.body.classList.remove("overflow-hidden");
+      document.body.classList.remove("modal-open-pointer-block");
       window.dispatchEvent(new CustomEvent("start-lenis"));
     }
   }, [open]);
