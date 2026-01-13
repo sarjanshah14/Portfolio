@@ -61,8 +61,8 @@ const ExperienceCard = ({
         )}
       >
         <CardHeader className="pb-3">
-          <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
-            <div className="space-y-1">
+          <div className="flex flex-col items-center gap-4">
+            <div className="space-y-1 text-center">
               <CardTitle className="text-lg md:text-xl font-bold tracking-tight">
                 {experience.title}
               </CardTitle>

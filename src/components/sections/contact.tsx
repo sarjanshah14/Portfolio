@@ -21,9 +21,9 @@ const ContactSection = () => {
           TOGETHER
         </>} />
       <div className="grid grid-cols-1 md:grid-cols-2 z-[9999] mx-4">
-        <Card className="w-full bg-white/70 dark:bg-black/70 backdrop-blur-sm rounded-xl mt-10 md:mt-20 shadow-xl border border-black/10 dark:border-white/10">
-          <CardHeader>
-            <CardTitle className="text-2xl md:text-4xl">Contact Form</CardTitle>
+        <Card className="w-full bg-card text-card-foreground border-border/50 rounded-xl mt-10 md:mt-20 shadow-lg dark:shadow-none">
+          <CardHeader className="p-6 md:p-10 pb-0 md:pb-0">
+            <CardTitle className="text-2xl md:text-3xl text-center font-bold">Contact Form</CardTitle>
             <CardDescription>
               Please contact me directly at{" "}
               <a
@@ -36,7 +36,7 @@ const ContactSection = () => {
               or drop your info here.
             </CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="p-6 md:p-10 pt-6 md:pt-6">
             <ContactForm />
           </CardContent>
         </Card>
