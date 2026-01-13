@@ -36,7 +36,7 @@ const ProjectsSection = () => {
   return (
     <SectionWrapper id="projects" className="max-w-7xl mx-auto md:h-[130vh]">
       <SectionHeader id='projects' title="Projects" />
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {projects.map((project, index) => (
           <Modall key={project.src} project={project} />
         ))}
@@ -61,9 +61,9 @@ const Modall = ({ project }: { project: Project }) => {
               height={300}
             />
             <div className="absolute w-full h-1/2 bottom-0 left-0 bg-gradient-to-t from-black via-black/85 to-transparent pointer-events-none">
-              <div className="flex flex-col h-full items-start justify-end p-3 md:p-6">
-                <div className="text-sm md:text-lg text-left">{project.title}</div>
-                <div className="text-[10px] md:text-xs bg-white text-black rounded-lg w-fit px-2">
+              <div className="flex flex-col h-full items-start justify-end p-6">
+                <div className="text-lg text-left">{project.title}</div>
+                <div className="text-xs bg-white text-black rounded-lg w-fit px-2">
                   {project.category}
                 </div>
               </div>
