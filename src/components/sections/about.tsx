@@ -40,7 +40,7 @@ const AboutSection = () => {
         <div className="flex flex-col lg:flex-row gap-5">
           <aside className="w-full md:basis-1/4">
             <div
-              className="p-4 md:p-8 lg:p-10 rounded-2xl border border-border/50 bg-card text-card-foreground shadow-lg dark:shadow-none"
+              className="p-3 md:p-8 lg:p-10 rounded-2xl border border-border/50 bg-card text-card-foreground shadow-lg dark:shadow-none"
             >
               <div className="flex flex-row lg:flex-col items-center">
                 <div className="flex justify-center items-center lg:w-full lg:aspect-square bg-muted lg:mb-5 overflow-hidden">
@@ -82,24 +82,24 @@ const AboutSection = () => {
           </aside>
           <main className="basis-3/4 w-full md:w-[500px] lg:w-auto">
             <div
-              className="p-4 md:p-10 border rounded-md border-border/50 bg-card text-card-foreground shadow-lg dark:shadow-none"
+              className="p-3 md:p-10 border rounded-md border-border/50 bg-card text-card-foreground shadow-lg dark:shadow-none"
             >
-              <h1 className="text-3xl mb-10 lg:md-20">About me</h1>
-              <p className="mb-6 text-roboto">
+              <h1 className="text-2xl md:text-3xl mb-10 lg:md-20">About me</h1>
+              <p className="mb-6 text-roboto text-sm md:text-base">
                 I specialize in building scalable web applications using the modern JavaScript stack,
                 with a strong focus on <strong>React</strong>, <strong>Next.js</strong>, and <strong>Node.js</strong>.
                 My expertise lies in crafting responsive, user-centric frontend interfaces that are both performant and accessible,
                 leveraging strict <strong>TypeScript</strong> for robust type safety.
               </p>
-              <p className="mb-6 text-roboto">
+              <p className="mb-6 text-roboto text-sm md:text-base">
                 On the backend, I design and implement secure <strong>RESTful</strong> and <strong>GraphQL APIs</strong>,
                 working with both SQL (<strong>PostgreSQL</strong>) and NoSQL (<strong>MongoDB</strong>) databases.
                 I focus on efficient data architecture and seamless integration between client and server systems.
               </p>
-              <p className="mb-10 text-roboto">
+              <p className="mb-10 text-roboto text-sm md:text-base">
                 I prioritize writing clean, maintainable code and am currently exploring <strong>advanced architecture</strong> and <strong>Docker</strong> to broaden my capabilities.
               </p>
-              <p className="mb-10 text-roboto">
+              <p className="mb-10 text-roboto text-sm md:text-base">
                 Beyond technical skills, I am passionate about understanding the business impact of software. I thrive in dynamic environments where I can collaborate with cross-functional teams to deliver solutions that truly help users. I am constantly seeking to refine my craft, staying updated with industry trends to build software that is not only functional but also future-proof.
               </p>
             </div>

@@ -63,10 +63,10 @@ const ExperienceCard = ({
         <CardHeader className="pb-3">
           <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
             <div className="space-y-1">
-              <CardTitle className="text-xl font-bold tracking-tight">
+              <CardTitle className="text-lg md:text-xl font-bold tracking-tight">
                 {experience.title}
               </CardTitle>
-              <div className="text-base font-medium text-zinc-600 dark:text-muted-foreground">
+              <div className="text-sm md:text-base font-medium text-zinc-600 dark:text-muted-foreground">
                 {experience.company}
               </div>
             </div>
@@ -76,7 +76,7 @@ const ExperienceCard = ({
           </div>
         </CardHeader>
         <CardContent className="space-y-6">
-          <ul className="list-disc list-outside ml-4 space-y-2 text-base text-zinc-600 dark:text-muted-foreground leading-relaxed">
+          <ul className="list-disc list-outside ml-4 space-y-2 text-sm md:text-base text-zinc-600 dark:text-muted-foreground leading-relaxed">
             {experience.description.map((point, i) => (
               <li key={i}>{point}</li>
             ))}
