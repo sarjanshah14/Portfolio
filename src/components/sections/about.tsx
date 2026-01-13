@@ -40,7 +40,7 @@ const AboutSection = () => {
         <div className="flex flex-col lg:flex-row gap-5">
           <aside className="w-full md:basis-1/4">
             <div
-              className="p-6 md:p-8 lg:p-10 rounded-2xl border border-border/50 bg-card text-card-foreground shadow-lg dark:shadow-none"
+              className="p-6 md:p-8 lg:p-10 rounded-2xl border border-border/50 bg-card/80 backdrop-blur-sm text-card-foreground shadow-lg dark:shadow-none"
             >
               <div className="flex flex-row lg:flex-col items-center">
                 <div className="flex justify-center items-center lg:w-full lg:aspect-square bg-muted lg:mb-5 overflow-hidden">
@@ -82,7 +82,7 @@ const AboutSection = () => {
           </aside>
           <main className="basis-3/4 w-full md:w-[500px] lg:w-auto">
             <div
-              className="p-6 md:p-10 border rounded-md border-border/50 bg-card text-card-foreground shadow-lg dark:shadow-none"
+              className="p-6 md:p-10 border rounded-md border-border/50 bg-card/80 backdrop-blur-sm text-card-foreground shadow-lg dark:shadow-none"
             >
               <h1 className="text-2xl md:text-3xl mb-10 lg:md-20 text-center font-bold">About me</h1>
               <p className="mb-6 text-roboto text-sm md:text-base">

@@ -21,7 +21,7 @@ const ContactSection = () => {
           TOGETHER
         </>} />
       <div className="grid grid-cols-1 md:grid-cols-2 z-[9999] mx-4">
-        <Card className="w-full bg-card text-card-foreground border-border/50 rounded-xl mt-10 md:mt-20 shadow-lg dark:shadow-none">
+        <Card className="w-full bg-card/80 backdrop-blur-sm text-card-foreground border-border/50 rounded-xl mt-10 md:mt-20 shadow-lg dark:shadow-none">
           <CardHeader className="p-6 md:p-10 pb-0 md:pb-0">
             <CardTitle className="text-2xl md:text-3xl text-center font-bold">Contact Form</CardTitle>
             <CardDescription>
