@@ -40,7 +40,7 @@ const AboutSection = () => {
         <div className="flex flex-col lg:flex-row gap-5">
           <aside className="w-full md:basis-1/4">
             <div
-              className="p-4 md:p-8 lg:p-10 rounded-2xl border border-border bg-card text-card-foreground"
+              className="p-4 md:p-8 lg:p-10 rounded-2xl border border-border/50 bg-card text-card-foreground shadow-lg dark:shadow-none"
             >
               <div className="flex flex-row lg:flex-col items-center">
                 <div className="flex justify-center items-center lg:w-full lg:aspect-square bg-muted lg:mb-5 overflow-hidden">
@@ -52,7 +52,7 @@ const AboutSection = () => {
                 </div>
                 <div className="flex flex-col gap-3 lg:items-center ml-10 md:ml-20 lg:ml-0">
                   <p className="text-center text-xl">Sarjan Shah</p>
-                  <div className="text-xs bg-secondary text-secondary-foreground w-fit px-3 py-1 rounded-full">
+                  <div className="text-xs bg-secondary text-zinc-700 dark:text-secondary-foreground w-fit px-3 py-1 rounded-full">
                     Software Developer
                   </div>
                 </div>
@@ -69,7 +69,7 @@ const AboutSection = () => {
                         <div className="w-8">{link.icon}</div>
                         <div className="flex flex-col">
                           <div className="text-sm">{link.name}</div>
-                          <div className="text-xs text-muted-foreground">
+                          <div className="text-xs text-zinc-600 dark:text-muted-foreground">
                             {link.content}
                           </div>
                         </div>
@@ -82,7 +82,7 @@ const AboutSection = () => {
           </aside>
           <main className="basis-3/4 w-full md:w-[500px] lg:w-auto">
             <div
-              className="p-4 md:p-10 border rounded-md border-border bg-card text-card-foreground"
+              className="p-4 md:p-10 border rounded-md border-border/50 bg-card text-card-foreground shadow-lg dark:shadow-none"
             >
               <h1 className="text-3xl mb-10 lg:md-20">About me</h1>
               <p className="mb-6 text-roboto">

@@ -57,7 +57,7 @@ const ExperienceCard = ({
         className={cn(
           "bg-card text-card-foreground border-border",
           "hover:border-primary/20 transition-colors duration-300",
-          "shadow-sm hover:shadow-md"
+          "shadow-lg dark:shadow-none hover:shadow-xl border-opacity-60"
         )}
       >
         <CardHeader className="pb-3">
@@ -66,7 +66,7 @@ const ExperienceCard = ({
               <CardTitle className="text-xl font-bold tracking-tight">
                 {experience.title}
               </CardTitle>
-              <div className="text-base font-medium text-muted-foreground">
+              <div className="text-base font-medium text-zinc-600 dark:text-muted-foreground">
                 {experience.company}
               </div>
             </div>
@@ -76,7 +76,7 @@ const ExperienceCard = ({
           </div>
         </CardHeader>
         <CardContent className="space-y-6">
-          <ul className="list-disc list-outside ml-4 space-y-2 text-base text-muted-foreground leading-relaxed">
+          <ul className="list-disc list-outside ml-4 space-y-2 text-base text-zinc-600 dark:text-muted-foreground leading-relaxed">
             {experience.description.map((point, i) => (
               <li key={i}>{point}</li>
             ))}
