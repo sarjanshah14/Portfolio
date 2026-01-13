@@ -14,8 +14,8 @@ const CONTACT_LINKS = [
   },
   {
     name: "Phone",
-    content: "1234567890",
-    href: "tel:1234567890",
+    content: "6351648593",
+    href: "tel:6351648593",
     icon: <FaPhone height={"50px"} />,
   },
   {
