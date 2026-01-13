@@ -19,19 +19,19 @@ const config = {
   ],
   author: "Sarjan Shah",
   email: "shahsarjan968@gmail.com",
-  site: "https://nareshkhatri.site",
+  site: "https://sarjanshah.site",
 
   // for github stars button
   githubUsername: "sarjanshah14",
-  githubRepo: "3d-portfolio",
+  githubRepo: "sarjanshah14",
 
   get ogImg() {
     return this.site + "/assets/seo/og-image.png";
   },
   social: {
-    twitter: "",
-    linkedin: "",
-    instagram: "",
+    twitter: "https://x.com/SarjanShah3",
+    linkedin: "https://www.linkedin.com/in/sarjan-shah-3324a334b/",
+    instagram: "https://www.instagram.com/sarjan_1403?igsh=bGVzaTU5YXdjaXkz&utm_source=qr",
     facebook: "",
     github: "https://github.com/sarjanshah14",
   },

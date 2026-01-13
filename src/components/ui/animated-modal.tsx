@@ -9,7 +9,7 @@ import React, {
   useRef,
   useState,
 } from "react";
-import { ScrollArea } from "./scroll-area";
+
 
 interface ModalContextType {
   open: boolean;
@@ -99,6 +99,46 @@ export const ModalBody = ({
   */
   // useOutsideClick(modalRef, () => setOpen(false));
 
+  // Focus Trap Logic
+  useEffect(() => {
+    if (!open || !modalRef.current) return;
+
+    const modalElement = modalRef.current as HTMLDivElement;
+    const focusableElements = modalElement.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    const firstElement = focusableElements[0] as HTMLElement;
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+    const handleTabKey = (e: KeyboardEvent) => {
+      if (e.key === "Tab") {
+        if (e.shiftKey) {
+          if (document.activeElement === firstElement) {
+            e.preventDefault();
+            lastElement.focus();
+          }
+        } else {
+          if (document.activeElement === lastElement) {
+            e.preventDefault();
+            firstElement.focus();
+          }
+        }
+      }
+    };
+
+    document.addEventListener("keydown", handleTabKey);
+    // Focus the first element when modal opens
+    if (firstElement) {
+      firstElement.focus();
+    }
+
+
+    return () => {
+      document.removeEventListener("keydown", handleTabKey);
+    };
+  }, [open]);
+
+
   return (
     <AnimatePresence>
       {open && (
@@ -114,14 +154,14 @@ export const ModalBody = ({
             opacity: 0,
             backdropFilter: "blur(0px)",
           }}
-          className="modall fixed [perspective:800px] [transform-style:preserve-3d] inset-0 h-full w-full  flex items-center justify-center z-50"
+          className="modal-container fixed [perspective:800px] [transform-style:preserve-3d] inset-0 h-full w-full  flex items-center justify-center z-50"
         >
           <Overlay />
 
           <motion.div
             ref={modalRef}
             className={cn(
-              "min-h-[50%] max-h-[90%] md:max-w-[40%] bg-white dark:bg-neutral-950 border border-transparent dark:border-neutral-800 md:rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden",
+              "min-h-[50%] max-h-[90vh] md:max-w-[40%] bg-white dark:bg-neutral-950 border border-transparent dark:border-neutral-800 md:rounded-2xl relative z-50 flex flex-col overflow-hidden",
               className
             )}
             initial={{
@@ -146,11 +186,11 @@ export const ModalBody = ({
               stiffness: 260,
               damping: 15,
             }}
+            role="dialog"
+            aria-modal="true"
           >
             <CloseIcon />
-            <ScrollArea className="h-[80dvh] w-full rounded-md border">
-              {children}
-            </ScrollArea>
+            {children}
           </motion.div>
         </motion.div>
       )}

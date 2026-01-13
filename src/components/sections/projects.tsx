@@ -11,6 +11,7 @@ import {
 } from "../ui/animated-modal";
 import { FloatingDock } from "../ui/floating-dock";
 import Link from "next/link";
+import SmoothScroll from "../smooth-scroll";
 
 
 import projects, { Project } from "@/data/projects";
@@ -47,9 +48,9 @@ const Modall = ({ project }: { project: Project }) => {
   return (
     <div className="flex items-center justify-center">
       <Modal>
-        <ModalTrigger className="bg-transparent flex justify-center group/modal-btn">
+        <ModalTrigger className="bg-transparent flex justify-center group/modal-btn w-full">
           <div
-            className="relative w-[400px] h-auto rounded-lg overflow-hidden"
+            className="relative w-full max-w-[400px] h-auto rounded-lg overflow-hidden"
             style={{ aspectRatio: "3/2" }}
           >
             <Image
@@ -70,9 +71,11 @@ const Modall = ({ project }: { project: Project }) => {
           </div>
         </ModalTrigger>
         <ModalBody className="md:max-w-4xl md:max-h-[80%] overflow-auto">
-          <ModalContent>
-            <ProjectContents project={project} />
-          </ModalContent>
+          <SmoothScroll isInsideModal={true}>
+            <ModalContent>
+              <ProjectContents project={project} />
+            </ModalContent>
+          </SmoothScroll>
           <ModalFooter className="gap-4">
             <CloseButton />
             <Link href={project.live} target="_blank">

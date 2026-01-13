@@ -345,7 +345,7 @@ const projects: Project[] = [
     category: "Disaster Response",
     title: "JanSanket",
     src: "/assets/projects-screenshots/jansanket/1.png",
-    screenshots: ["1.png"], // Placeholder
+    screenshots: ["1.png", "2.png", "3.png", "4.png"],
     live: "https://jan-sanket.vercel.app",
     github: "https://github.com/sarjanshah14/JanSanket",
     skills: {
@@ -375,21 +375,19 @@ const projects: Project[] = [
 
           <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
           <ul className="list-disc ml-6 font-mono mb-4">
-             <li className="mb-2"><strong>Disaster Management:</strong> Real-time reporting with validation, interactive maps, and support for multiple disaster types.</li>
-             <li className="mb-2"><strong>Shelter Management:</strong> Directory tracking, capacity monitoring, and admin verification.</li>
-             <li className="mb-2"><strong>Volunteer Coordination:</strong> Registration, role-based matching, and availability tracking.</li>
-             <li className="mb-2"><strong>ML Integration:</strong> Resource prediction (food, water, medical) using Random Forest models.</li>
+            <li className="mb-2"><strong>Disaster Management:</strong> Real-time reporting with validation, interactive maps, and support for multiple disaster types.</li>
+            <li className="mb-2"><strong>Shelter Management:</strong> Directory tracking, capacity monitoring, and admin verification.</li>
+            <li className="mb-2"><strong>Volunteer Coordination:</strong> Registration, role-based matching, and availability tracking.</li>
+            <li className="mb-2"><strong>ML Integration:</strong> Resource prediction (food, water, medical) using Random Forest models.</li>
           </ul>
 
-           <SlideShow
-            images={[
-               `${BASE_PATH}/jansanket/1.png`,
-            ]}
+          <SlideShow
+            images={this.screenshots.map((screenshot) => `${BASE_PATH}/${this.id}/${screenshot}`)}
           />
 
           <TypographyH3 className="my-4 mt-8">Tech Stack</TypographyH3>
           <p className="font-mono mb-2">
-            <strong>Frontend:</strong> React 19, React Router, Bootstrap 5, Leaflet, Axios.<br/>
+            <strong>Frontend:</strong> React 19, React Router, Bootstrap 5, Leaflet, Axios.<br />
             <strong>Backend:</strong> Django 5, DRF, Django Channels (WebSocket), Pillow, Scikit-learn, Pandas, NumPy.
           </p>
         </div>
@@ -401,7 +399,7 @@ const projects: Project[] = [
     category: "AI/ML Platform",
     title: "SensorGuard",
     src: "/assets/projects-screenshots/sensorguard/1.png",
-    screenshots: ["1.png"], // Placeholder
+    screenshots: ["1.png", "2.png", "3.png", "4.png"],
     live: "https://sensorcalibrationplatform-1.onrender.com/",
     github: "https://github.com/sarjanshah14/SensorCalibrationPlatform",
     skills: {
@@ -421,9 +419,9 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono text-2xl text-center">
-             SensorGuard - AI-Powered Sensor Calibration Platform
+            SensorGuard - AI-Powered Sensor Calibration Platform
           </TypographyP>
-           <TypographyP className="font-mono text-center mb-4">
+          <TypographyP className="font-mono text-center mb-4">
             A comprehensive sensor monitoring and calibration platform leveraging AI/ML to predict drift, detect anomalies, and optimize calibration schedules.
           </TypographyP>
 
@@ -437,15 +435,13 @@ const projects: Project[] = [
             <li className="mb-2"><strong>Automated Calibration:</strong> AI-driven recommendations.</li>
           </ul>
 
-           <SlideShow
-            images={[
-               `${BASE_PATH}/sensorguard/1.png`,
-            ]}
+          <SlideShow
+            images={this.screenshots.map((screenshot) => `${BASE_PATH}/${this.id}/${screenshot}`)}
           />
 
           <TypographyH3 className="my-4 mt-8">Tech Stack</TypographyH3>
-           <p className="font-mono mb-2">
-            <strong>Frontend:</strong> React 18, TypeScript, Tailwind CSS, shadcn/ui, Recharts.<br/>
+          <p className="font-mono mb-2">
+            <strong>Frontend:</strong> React 18, TypeScript, Tailwind CSS, shadcn/ui, Recharts.<br />
             <strong>Backend:</strong> Django 5.2.6, DRF, JWT Auth, Scikit-learn, Pandas, NumPy.
           </p>
         </div>
@@ -457,7 +453,7 @@ const projects: Project[] = [
     category: "Web Application",
     title: "LetsPark",
     src: "/assets/projects-screenshots/letspark/1.png",
-    screenshots: ["1.png"], // Placeholder
+    screenshots: ["1.png", "2.png", "3.png", "4.png"],
     live: "https://parkingspotfinder.onrender.com",
     github: "https://github.com/sarjanshah14/ParkingSpotFinder",
     skills: {
@@ -478,28 +474,26 @@ const projects: Project[] = [
             LetsPark (PleaseLetMePark)
           </TypographyP>
           <TypographyP className="font-mono text-center mb-4">
-             A full‑stack parking booking platform designed to facilitate seamless reservations of parking spaces with secure payments and SMS notifications.
+            A full‑stack parking booking platform designed to facilitate seamless reservations of parking spaces with secure payments and SMS notifications.
           </TypographyP>
 
           <ProjectsLinks live={this.live} repo={this.github} />
 
-           <TypographyH3 className="my-4 mt-8">Core Features</TypographyH3>
+          <TypographyH3 className="my-4 mt-8">Core Features</TypographyH3>
           <ul className="list-disc ml-6 font-mono mb-4">
             <li className="mb-2"><strong>Booking System:</strong> Smart scheduling, state management, and real-time availability.</li>
-             <li className="mb-2"><strong>Premises Management:</strong> Geospatial data, image support, and pricing.</li>
-             <li className="mb-2"><strong>Payments:</strong> Secure Stripe integration with verify endpoints.</li>
-             <li className="mb-2"><strong>Notifications:</strong> Twilio SMS integration for booking confirmations.</li>
+            <li className="mb-2"><strong>Premises Management:</strong> Geospatial data, image support, and pricing.</li>
+            <li className="mb-2"><strong>Payments:</strong> Secure Stripe integration with verify endpoints.</li>
+            <li className="mb-2"><strong>Notifications:</strong> Twilio SMS integration for booking confirmations.</li>
           </ul>
 
-           <SlideShow
-            images={[
-               `${BASE_PATH}/letspark/1.png`,
-            ]}
+          <SlideShow
+            images={this.screenshots.map((screenshot) => `${BASE_PATH}/${this.id}/${screenshot}`)}
           />
 
           <TypographyH3 className="my-4 mt-8">Tech Stack</TypographyH3>
-           <p className="font-mono mb-2">
-            <strong>Backend:</strong> Django 5.2, DRF, JWT (SimpleJWT), Stripe, Twilio.<br/>
+          <p className="font-mono mb-2">
+            <strong>Backend:</strong> Django 5.2, DRF, JWT (SimpleJWT), Stripe, Twilio.<br />
             <strong>Frontend:</strong> React, Stripe Checkout.
           </p>
         </div>
@@ -513,7 +507,7 @@ const projects: Project[] = [
     category: "AI/ML Discovery",
     title: "ExoScope",
     src: "/assets/projects-screenshots/exoplanets/1.png",
-    screenshots: ["1.png"], // Placeholder
+    screenshots: ["1.png", "2.png", "3.png"],
     live: "https://exoplanets-1.onrender.com/",
     github: "https://github.com/sarjanshah14/Exoplanets",
     skills: {
@@ -522,10 +516,10 @@ const projects: Project[] = [
         PROJECT_SKILLS.js,
       ],
       backend: [
-         PROJECT_SKILLS.python,
-         PROJECT_SKILLS.scikitlearn,
-         PROJECT_SKILLS.pandas,
-         PROJECT_SKILLS.numpy,
+        PROJECT_SKILLS.python,
+        PROJECT_SKILLS.scikitlearn,
+        PROJECT_SKILLS.pandas,
+        PROJECT_SKILLS.numpy,
       ],
     },
     get content() {
@@ -541,28 +535,26 @@ const projects: Project[] = [
           <ProjectsLinks live={this.live} repo={this.github} />
 
           <TypographyH3 className="my-4 mt-8">Project Overview</TypographyH3>
-           <p className="font-mono mb-2">
+          <p className="font-mono mb-2">
             Built for the NASA Space Apps Challenge, ExoScope features a backend ML pipeline that cleans data and trains models, and a frontend Data Explorer for visualization.
-           </p>
+          </p>
 
-           <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
-           <ul className="list-disc ml-6 font-mono mb-4">
-             <li className="mb-2"><strong>ML Classifier:</strong> Random Forest model trained on NASA datasets.</li>
-             <li className="mb-2"><strong>Data Explorer:</strong> Upload CSVs to get predictions and charts.</li>
-             <li className="mb-2"><strong>Interpretability:</strong> Highlights top-6 features (koi_depth, koi_prad, etc.) driving decisions.</li>
-           </ul>
+          <TypographyH3 className="my-4 mt-8">Key Features</TypographyH3>
+          <ul className="list-disc ml-6 font-mono mb-4">
+            <li className="mb-2"><strong>ML Classifier:</strong> Random Forest model trained on NASA datasets.</li>
+            <li className="mb-2"><strong>Data Explorer:</strong> Upload CSVs to get predictions and charts.</li>
+            <li className="mb-2"><strong>Interpretability:</strong> Highlights top-6 features (koi_depth, koi_prad, etc.) driving decisions.</li>
+          </ul>
 
-           <SlideShow
-            images={[
-               `${BASE_PATH}/exoplanets/1.png`,
-            ]}
+          <SlideShow
+            images={this.screenshots.map((screenshot) => `${BASE_PATH}/${this.id}/${screenshot}`)}
           />
 
-           <TypographyH3 className="my-4 mt-8">Tech Stack</TypographyH3>
-           <p className="font-mono mb-2">
-            <strong>Backend:</strong> Python, Scikit-learn, Pandas, NumPy.<br/>
+          <TypographyH3 className="my-4 mt-8">Tech Stack</TypographyH3>
+          <p className="font-mono mb-2">
+            <strong>Backend:</strong> Python, Scikit-learn, Pandas, NumPy.<br />
             <strong>Frontend:</strong> React, Chart.js (or similar for viz).
-           </p>
+          </p>
         </div>
       );
     },
@@ -572,7 +564,7 @@ const projects: Project[] = [
     category: "E-Commerce",
     title: "Perfect Bearing",
     src: "/assets/projects-screenshots/perfectbearing/1.png",
-    screenshots: ["1.png"], // Placeholder
+    screenshots: ["1.png", "2.png", "3.png", "4.png"],
     live: "https://www.perfectbearing.co.in",
     github: "https://github.com/sarjanshah14/PerfectBearing",
     skills: {
@@ -589,30 +581,28 @@ const projects: Project[] = [
           <TypographyP className="font-mono text-2xl text-center">
             Perfect Bearing Website
           </TypographyP>
-           <TypographyP className="font-mono text-center mb-4">
+          <TypographyP className="font-mono text-center mb-4">
             A modern, responsive e-commerce catalog website for a leading industrial bearings exporter.
           </TypographyP>
 
           <ProjectsLinks live={this.live} repo={this.github} />
 
-           <TypographyH3 className="my-4 mt-8">Features</TypographyH3>
-           <ul className="list-disc ml-6 font-mono mb-4">
-             <li className="mb-2"><strong>Dynamic Catalog:</strong> Products populated dynamically from a JSON database.</li>
-             <li className="mb-2"><strong>Smart Search:</strong> Real-time autocomplete for bearing models.</li>
-             <li className="mb-2"><strong>Dark/Light Mode:</strong> Fully supported theme toggling.</li>
-             <li className="mb-2"><strong>Contact:</strong> EmailJS and WhatsApp integration.</li>
-           </ul>
+          <TypographyH3 className="my-4 mt-8">Features</TypographyH3>
+          <ul className="list-disc ml-6 font-mono mb-4">
+            <li className="mb-2"><strong>Dynamic Catalog:</strong> Products populated dynamically from a JSON database.</li>
+            <li className="mb-2"><strong>Smart Search:</strong> Real-time autocomplete for bearing models.</li>
+            <li className="mb-2"><strong>Dark/Light Mode:</strong> Fully supported theme toggling.</li>
+            <li className="mb-2"><strong>Contact:</strong> EmailJS and WhatsApp integration.</li>
+          </ul>
 
-           <SlideShow
-            images={[
-               `${BASE_PATH}/perfectbearing/1.png`,
-            ]}
+          <SlideShow
+            images={this.screenshots.map((screenshot) => `${BASE_PATH}/${this.id}/${screenshot}`)}
           />
 
-           <TypographyH3 className="my-4 mt-8">Tech Stack</TypographyH3>
-            <p className="font-mono mb-2">
+          <TypographyH3 className="my-4 mt-8">Tech Stack</TypographyH3>
+          <p className="font-mono mb-2">
             HTML5, CSS3, Vanilla JavaScript, JSON Database, FontAwesome, Google Analytics 4.
-           </p>
+          </p>
         </div>
       );
     },
@@ -622,7 +612,7 @@ const projects: Project[] = [
     category: "Educational",
     title: "Interactive Periodic Table",
     src: "/assets/projects-screenshots/periodic-table/1.png",
-    screenshots: ["1.png"], // Placeholder
+    screenshots: ["1.png", "2.png"],
     live: "https://interactive-periodic-table-omega.vercel.app/",
     github: "https://github.com/sarjanshah14/Interactive-Periodic-Table",
     skills: {
@@ -640,7 +630,7 @@ const projects: Project[] = [
     get content() {
       return (
         <div>
-           <TypographyP className="font-mono text-2xl text-center">
+          <TypographyP className="font-mono text-2xl text-center">
             Interactive Periodic Table
           </TypographyP>
           <TypographyP className="font-mono text-center mb-4">
@@ -650,24 +640,22 @@ const projects: Project[] = [
           <ProjectsLinks live={this.live} repo={this.github} />
 
           <TypographyH3 className="my-4 mt-8">Features</TypographyH3>
-           <ul className="list-disc ml-6 font-mono mb-4">
-             <li className="mb-2"><strong>Interactive Elements:</strong> Click to view details (atomic number, weight, etc.).</li>
-             <li className="mb-2"><strong>Comparisons:</strong> Compare elements side-by-side.</li>
-             <li className="mb-2"><strong>Search:</strong> Smart search by name, symbol, or number.</li>
-             <li className="mb-2"><strong>FAQ Section:</strong> Database-driven FAQ system.</li>
-           </ul>
+          <ul className="list-disc ml-6 font-mono mb-4">
+            <li className="mb-2"><strong>Interactive Elements:</strong> Click to view details (atomic number, weight, etc.).</li>
+            <li className="mb-2"><strong>Comparisons:</strong> Compare elements side-by-side.</li>
+            <li className="mb-2"><strong>Search:</strong> Smart search by name, symbol, or number.</li>
+            <li className="mb-2"><strong>FAQ Section:</strong> Database-driven FAQ system.</li>
+          </ul>
 
-           <SlideShow
-            images={[
-               `${BASE_PATH}/periodic-table/1.png`,
-            ]}
+          <SlideShow
+            images={this.screenshots.map((screenshot) => `${BASE_PATH}/${this.id}/${screenshot}`)}
           />
 
-           <TypographyH3 className="my-4 mt-8">Tech Stack</TypographyH3>
-           <p className="font-mono mb-2">
-            <strong>Backend:</strong> Python, Flask, MySQL.<br/>
+          <TypographyH3 className="my-4 mt-8">Tech Stack</TypographyH3>
+          <p className="font-mono mb-2">
+            <strong>Backend:</strong> Python, Flask, MySQL.<br />
             <strong>Frontend:</strong> HTML, CSS, JavaScript, Jinja2 Templates.
-           </p>
+          </p>
         </div>
       );
     },

@@ -102,7 +102,7 @@ body {
     pointer-events: none !important;
   }
 
-  .modal-open-pointer-block .modall {
+  .modal-open-pointer-block .modal-container {
     pointer-events: auto !important;
   }
 }

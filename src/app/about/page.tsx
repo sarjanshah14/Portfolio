@@ -1,38 +1,38 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { DiMongodb, DiNginx, DiNpm, DiPostgresql, DiVim } from "react-icons/di";
+import { DiMongodb, DiNpm, DiPostgresql } from "react-icons/di";
 import {
-  FaAws,
   FaCss3,
-  FaDocker,
   FaEnvelope,
   FaGit,
   FaGithub,
   FaHtml5,
   FaLinkedin,
-  FaLinux,
   FaNodeJs,
   FaPhone,
   FaReact,
-  FaVuejs,
-  FaYarn,
+  FaJava,
 } from "react-icons/fa6";
 import {
-  RiFirebaseFill,
-  RiJavascriptFill,
   RiNextjsFill,
   RiTailwindCssFill,
 } from "react-icons/ri";
 import {
   SiExpress,
   SiJavascript,
-  SiKubuntu,
-  SiPm2,
   SiPrettier,
   SiTypescript,
   SiVercel,
-  SiVscodium,
+  SiBootstrap,
+  SiFlutter,
+  SiDart,
+  SiPython,
+  SiNumpy,
+  SiPandas,
+  SiRender,
+  SiTensorflow
 } from "react-icons/si";
+
 import { VscCode } from "react-icons/vsc";
 
 // @ts-ignore
@@ -43,26 +43,26 @@ import { TbTerminal2 } from "react-icons/tb";
 const CONTACT_LINKS = [
   {
     name: "Email",
-    content: "naresh.khatri2345@gmail",
-    href: "mailto:naresh.khatri2345@gmail.com",
+    content: "shahsarjan968@gmail",
+    href: "mailto:shahsarjan968@gmail.com",
     icon: <FaEnvelope height={"50px"} />,
   },
   {
     name: "Phone",
-    content: "1234567890",
-    href: "tel:1234567890",
+    content: "+916351648593",
+    href: "tel:+916351648593",
     icon: <FaPhone height={"50px"} />,
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/naresh-khatri/",
-    content: "/naresh-khatri",
+    href: "https://www.linkedin.com/in/sarjan-shah-3324a334b/",
+    content: "/sarjan-shah-3324a334b",
     icon: <FaLinkedin height={"50px"} />,
   },
   {
     name: "GitHub",
-    href: "https://github.com/Naresh-Khatri",
-    content: "/naresh-khatri",
+    href: "https://github.com/sarjanshah14",
+    content: "/sarjanshah14",
     icon: <FaGithub height={"50px"} />,
   },
 ];
@@ -70,160 +70,153 @@ const CONTACT_LINKS = [
 const TOOLS = [
   {
     name: "JavaScript",
-    content: "JavaScript is a high-level, interpreted programming language",
-    icon: <SiJavascript size={"50px"} color={"#f0db4f"} />,
+    content: "High-level, interpreted programming language for web development",
+    icon: <SiJavascript size="50px" color="#f0db4f" />,
     color: "#f0db4f",
   },
   {
     name: "TypeScript",
-    content: "TypeScript is a superset of JavaScript that compiles to plain JS",
-    icon: <SiTypescript size={"50px"} color={"#007acc"} />,
+    content: "Superset of JavaScript with static typing",
+    icon: <SiTypescript size="50px" color="#007acc" />,
     color: "#007acc",
   },
   {
     name: "HTML",
-    content: "Next.js is a React framework for production",
-    icon: <FaHtml5 size={"50px"} color="#e34c26" />,
+    content: "Semantic HTML5 markup for structured web content",
+    icon: <FaHtml5 size="50px" color="#e34c26" />,
     color: "#e34c26",
   },
   {
     name: "CSS",
-    content: "Next.js is a React framework for production",
-    icon: <FaCss3 size={"50px"} color="#563d7c" />,
+    content: "Styling language for web design and responsive layouts",
+    icon: <FaCss3 size="50px" color="#563d7c" />,
     color: "#563d7c",
   },
   {
-    name: "Nodejs",
-    content: "Next.js is a React framework for production",
-    icon: <FaNodeJs size={"50px"} color="#6cc24a" />,
-    color: "#6cc24a",
-  },
-  {
-    name: "React.js",
-    content: "Next.js is a React framework for production",
-    icon: <FaReact size={"50px"} color="#61dafb" />,
+    name: "React",
+    content: "Component-based UI library for building user interfaces",
+    icon: <FaReact size="50px" color="#61dafb" />,
     color: "#61dafb",
   },
   {
-    name: "Docker",
-    content: "Next.js is a React framework for production",
-    icon: <FaDocker size={"50px"} color="#2496ed" />,
-    color: "#2496ed",
+    name: "Next.js",
+    content: "React framework with server-side rendering",
+    icon: <RiNextjsFill size="50px" color="#000" />,
+    color: "#000000",
   },
   {
-    name: "NginX",
-    content: "Next.js is a React framework for production",
-    icon: <DiNginx size={"50px"} color="#008000" />,
-    color: "#008000",
+    name: "Tailwind CSS",
+    content: "Utility-first CSS framework",
+    icon: <RiTailwindCssFill size="50px" color="#06b6d4" />,
+    color: "#06b6d4",
   },
   {
-    name: "Vue.js",
-    content: "Next.js is a React framework for production",
-    icon: <FaVuejs size={"50px"} color="#41b883" />,
-    color: "#41b883",
+    name: "Node.js",
+    content: "JavaScript runtime for backend applications",
+    icon: <FaNodeJs size="50px" color="#6cc24a" />,
+    color: "#6cc24a",
   },
   {
-    name: "Express.js",
-    content: "Next.js is a React framework for production",
-    icon: <SiExpress size={"50px"} color="#fff" />,
+    name: "Express",
+    content: "Minimal web framework for Node.js",
+    icon: <SiExpress size="50px" color="#ffffff" />,
     color: "#000000",
   },
   {
     name: "PostgreSQL",
-    content: "Next.js is a React framework for production",
-    icon: <DiPostgresql size={"50px"} color="#336791" />,
+    content: "Relational database system",
+    icon: <DiPostgresql size="50px" color="#336791" />,
     color: "#336791",
   },
   {
     name: "MongoDB",
-    content: "Next.js is a React framework for production",
-    icon: <DiMongodb size={"50px"} color="#4db33d" />,
+    content: "NoSQL document database",
+    icon: <DiMongodb size="50px" color="#4db33d" />,
     color: "#4db33d",
   },
   {
-    name: "Tailwind CSS",
-    content: "Next.js is a React framework for production",
-    icon: <RiTailwindCssFill size={"50px"} color="#06b6d4" />,
-    color: "#06b6d4",
-  },
-  {
-    name: "Firebase",
-    content: "Next.js is a React framework for production",
-    icon: <RiFirebaseFill size={"50px"} color="#FFCA28" />,
-    color: "#FFCA28",
-  },
-  {
     name: "Git",
-    content: "Next.js is a React framework for production",
-    icon: <FaGit size={"50px"} color="#f05032" />,
+    content: "Distributed version control system",
+    icon: <FaGit size="50px" color="#f05032" />,
     color: "#f05032",
   },
   {
     name: "GitHub",
-    content: "Next.js is a React framework for production",
-    icon: <FaGithub size={"50px"} color="#fff" />,
-    color: "#000000",
-  },
-  {
-    name: "VS Code",
-    content: "Next.js is a React framework for production",
-    icon: <SiVscodium size={"50px"} color="#007acc" />,
-    color: "#007acc",
-  },
-  {
-    name: "VIM",
-    content: "Next.js is a React framework for production",
-    icon: <DiVim size={"50px"} color="#fff" />,
+    content: "Code hosting and collaboration platform",
+    icon: <FaGithub size="50px" color="#ffffff" />,
     color: "#000000",
   },
   {
     name: "Prettier",
-    content: "Next.js is a React framework for production",
-    icon: <SiPrettier size={"50px"} color="#f7b93c" />,
+    content: "Opinionated code formatter",
+    icon: <SiPrettier size="50px" color="#f7b93c" />,
     color: "#f7b93c",
   },
   {
     name: "NPM",
-    content: "Next.js is a React framework for production",
-    icon: <DiNpm size={"50px"} color="#CB3837" />,
+    content: "JavaScript package manager",
+    icon: <DiNpm size="50px" color="#CB3837" />,
     color: "#CB3837",
   },
   {
-    name: "Yarn",
-    content: "Next.js is a React framework for production",
-    icon: <FaYarn size={"50px"} color="#2C8EBB" />,
-    color: "#2C8EBB",
-  },
-  {
     name: "Vercel",
-    content: "Next.js is a React framework for production",
-    icon: <SiVercel size={"50px"} color="#fff" />,
+    content: "Frontend deployment platform",
+    icon: <SiVercel size="50px" color="#ffffff" />,
     color: "#000000",
   },
   {
-    name: "Linux",
-    content: "Next.js is a React framework for production",
-    icon: <FaLinux size={"50px"} color="#fff" />,
-    color: "#000000",
+    name: "Flutter",
+    content: "Cross-platform UI toolkit",
+    icon: <SiFlutter size="50px" color="#02569B" />,
+    color: "#02569B",
   },
   {
-    name: "Kubuntu",
-    content: "Next.js is a React framework for production",
-    // give me correct color for  kubuntu
-    icon: <SiKubuntu size={"50px"} color="#0077C4" />,
-    color: "#000000",
+    name: "Dart",
+    content: "Language optimized for UI development",
+    icon: <SiDart size="50px" color="#0175C2" />,
+    color: "#0175C2",
   },
   {
-    name: "Terminal",
-    content: "Next.js is a React framework for production",
-    icon: <TbTerminal2 size={"50px"} color="#fff" />,
-    color: "#000000",
+    name: "Bootstrap",
+    content: "CSS framework for responsive design",
+    icon: <SiBootstrap size="50px" color="#7952B3" />,
+    color: "#7952B3",
   },
   {
-    name: "AWS",
-    content: "Next.js is a React framework for production",
-    icon: <FaAws size={"50px"} color="#3f51b5" />,
-    color: "#000000",
+    name: "Render",
+    content: "Cloud platform for deploying web apps and APIs",
+    icon: <SiRender size="50px" color="#46E3B7" />,
+    color: "#46E3B7",
+  },
+  {
+    name: "Python",
+    content: "Language for AI, ML, and backend development",
+    icon: <SiPython size="50px" color="#3776AB" />,
+    color: "#3776AB",
+  },
+  {
+    name: "Java",
+    content: "Enterprise-grade programming language",
+    icon: <FaJava size="50px" color="#ED8B00" />,
+    color: "#ED8B00",
+  },
+  {
+    name: "NumPy",
+    content: "Numerical computing library for Python",
+    icon: <SiNumpy size="50px" color="#013243" />,
+    color: "#013243",
+  },
+  {
+    name: "TensorFlow",
+    content: "End-to-end machine learning framework for building and deploying models",
+    icon: <SiTensorflow size="50px" color="#FF6F00" />,
+    color: "#FF6F00",
+  },
+  {
+    name: "Pandas",
+    content: "Data manipulation and analysis library",
+    icon: <SiPandas size="50px" color="#150458" />,
+    color: "#150458",
   },
 ];
 
@@ -243,17 +236,17 @@ function Page() {
             }}
           >
             <div className="flex flex-row lg:flex-col items-center">
-              <div className="flex justify-center items-center lg:w-full lg:aspect-square bg-zinc-800 rounded-xl lg:mb-5">
+              <div className="flex justify-center items-center lg:w-full lg:aspect-square bg-zinc-800 lg:mb-5 overflow-hidden">
                 <img
-                  className="rounded-full p-4 lg:p-10 w-[100px] md:w-[150px] lg:w-[200px] aspect-square  bg-zinc-800"
+                  className="w-full h-full object-cover"
                   alt="me"
                   src="/assets/me.jpg"
                 />
               </div>
               <div className="flex flex-col gap-3 lg:items-center ml-10 md:ml-20 lg:ml-0">
-                <p className="text-center text-xl">Naresh Khatri</p>
+                <p className="text-center text-xl">Sarjan Shah</p>
                 <div className="text-xs bg-zinc-700 w-fit px-3 py-1 rounded-full">
-                  Web Developer
+                  Software Developer
                 </div>
               </div>
             </div>
@@ -287,16 +280,18 @@ function Page() {
           >
             <h1 className="text-3xl mb-10 lg:md-20">About me</h1>
             <p className="mb-10 text-roboto">
-              Hey there! I&apos;m Naresh, a Fullstack developer passionate about
-              creating meaningful digital experiences. With great in Web
-              development, I thrive on turning ideas into reality through coding
-              and design. My journey began with a fascination for technology and
-              a drive to make a positive impact.
+              I build web applications using React, Next.js, and Node.js. My
+              projects include full-stack applications with REST APIs, database
+              integration, and responsive frontend interfaces. I work with
+              PostgreSQL and MongoDB for data management, and use TypeScript for
+              type-safe development.
             </p>
             <p className="mb-10">
-              When I&apos;m not coding, you can find me [Your
-              Interests/Hobbies], exploring new technologies, or sipping coffee
-              while brainstorming my next project.
+              Currently learning backend architecture, API design patterns, and
+              database optimization. Exploring deployment practices and
+              containerization with Docker. Aiming for software developer roles
+              where I can contribute to production applications and continue
+              building practical skills in a collaborative environment.
             </p>
             <h1 className="text-3xl mb-10 lg:md-20">Stuff I use</h1>
             <div className="mb-5">

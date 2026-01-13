@@ -1,6 +1,6 @@
 "use client";
 import { Check, ChevronRight, Loader2 } from "lucide-react";
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Label } from "./ui/label";
 import { Input } from "./ui/ace-input";
 import { Textarea } from "./ui/ace-textarea";
@@ -8,33 +8,51 @@ import { cn } from "@/lib/utils";
 import { useToast } from "./ui/use-toast";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
+import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
   const [fullName, setFullName] = React.useState("");
   const [email, setEmail] = React.useState("");
+  const [phone, setPhone] = React.useState("");
   const [message, setMessage] = React.useState("");
   const [loading, setLoading] = React.useState(false);
+  const [time, setTime] = useState("");
+
+  const formRef = useRef<HTMLFormElement>(null);
 
   const { toast } = useToast();
   const router = useRouter();
 
+  useEffect(() => {
+    setTime(new Date().toLocaleString());
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-    try {
-      const res = await fetch("/api/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          fullName,
-          email,
-          message,
-        }),
+
+    // Replace with your actual EmailJS Public Key
+    const PUBLIC_KEY = "fGTHyXQM2r2YzGb3a";
+
+    if (!PUBLIC_KEY) {
+      toast({
+        title: "Configuration Missing",
+        description: "Please set your EmailJS Public Key in ContactForm.tsx",
+        variant: "destructive",
       });
-      const data = await res.json();
-      if (data.error) throw new Error(data.error);
+      setLoading(false);
+      return;
+    }
+
+    try {
+      // service_id, template_id, form_current, public_key
+      await emailjs.sendForm(
+        "service_6rb3kkc",
+        "template_u9ogeyf",
+        formRef.current!,
+        PUBLIC_KEY
+      );
+
       toast({
         title: "Thank you!",
         description: "I'll get back to you as soon as possible.",
@@ -44,15 +62,17 @@ const ContactForm = () => {
       setLoading(false);
       setFullName("");
       setEmail("");
+      setPhone("");
       setMessage("");
-      const timer = setTimeout(() => {
-        router.push("/");
-        clearTimeout(timer);
-      }, 1000);
-    } catch (err) {
+      // const timer = setTimeout(() => {
+      //   router.push("/");
+      //   clearTimeout(timer);
+      // }, 1000);
+    } catch (err: any) {
+      console.error(err);
       toast({
         title: "Error",
-        description: "Something went wrong! Please check the fields.",
+        description: err.text || "Something went wrong! Please check the fields.",
         className: cn(
           "top-0 w-full flex justify-center fixed md:max-w-7xl md:top-4 md:right-4"
         ),
@@ -62,39 +82,60 @@ const ContactForm = () => {
     setLoading(false);
   };
   return (
-    <form className="min-w-7xl mx-auto sm:mt-4" onSubmit={handleSubmit}>
+    <form ref={formRef} className="min-w-7xl mx-auto sm:mt-4" onSubmit={handleSubmit}>
+      {/* Hidden input for time parameter in EmailJS template */}
+      <input type="hidden" name="time" value={time} />
+
       <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
         <LabelInputContainer>
           <Label htmlFor="fullname">Full name</Label>
           <Input
             id="fullname"
+            name="name" // Updated to match {{name}}
             placeholder="Your Name"
             type="text"
             required
             value={fullName}
-            onChange={(e) => setFullName(e.target.value)}
+            onChange={(e: any) => setFullName(e.target.value)}
           />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email Address</Label>
           <Input
             id="email"
+            name="email" // Updated to match {{email}}
             placeholder="you@example.com"
             type="email"
             required
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e: any) => setEmail(e.target.value)}
           />
         </LabelInputContainer>
       </div>
+
+      <div className="mb-4">
+        <LabelInputContainer>
+          <Label htmlFor="phone">Phone Number</Label>
+          <Input
+            id="phone"
+            name="phone" // Matches {{phone}}
+            placeholder="+1 (555) 000-0000"
+            type="tel"
+            value={phone}
+            onChange={(e: any) => setPhone(e.target.value)}
+          />
+        </LabelInputContainer>
+      </div>
+
       <div className="grid w-full gap-1.5 mb-4">
         <Label htmlFor="content">Your Message</Label>
         <Textarea
           placeholder="Tell me about about your project,"
           id="content"
+          name="message" // Matches {{message}}
           required
           value={message}
-          onChange={(e) => setMessage(e.target.value)}
+          onChange={(e: any) => setMessage(e.target.value)}
         />
         <p className="text-sm text-muted-foreground">
           I&apos;ll never share your data with anyone else. Pinky promise!

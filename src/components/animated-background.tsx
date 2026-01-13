@@ -11,7 +11,7 @@ import { usePreloader } from "./preloader";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
 import { Section, getKeyboardState } from "./animated-background-config";
-import { useSounds } from "./realtime/hooks/use-sounds";
+import { useSounds } from "@/hooks/use-sounds";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,7 +29,7 @@ const AnimatedBackground = () => {
   const [activeSection, setActiveSection] = useState<Section>("hero");
 
   // Animation controllers refs
-  const bongoAnimationRef = useRef<{ start: () => void; stop: () => void }>();
+  // const bongoAnimationRef = useRef<{ start: () => void; stop: () => void }>();
   const keycapAnimationsRef = useRef<{ start: () => void; stop: () => void }>();
 
   const [keyboardRevealed, setKeyboardRevealed] = useState(false);
@@ -56,10 +56,14 @@ const AnimatedBackground = () => {
           playPressSound();
           setSelectedSkill(skill);
           selectedSkillRef.current = skill;
+        } else {
+          // Debug: Log keycaps that don't match any skill
+          console.warn(`⚠️ Keycap "${e.target.name}" in Spline model doesn't match any skill. Update Spline keycap name to match one of:`, Object.values(SKILLS).map(s => s.name).join(", "));
         }
       }
     }
   };
+  // Stray brace removed
 
   const handleSplineInteractions = () => {
     if (!splineApp) return;
@@ -147,38 +151,39 @@ const AnimatedBackground = () => {
     createSectionTimeline("#contact", "contact", "projects", "top 30%");
   };
 
-  const getBongoAnimation = () => {
-    const framesParent = splineApp?.findObjectByName("bongo-cat");
-    const frame1 = splineApp?.findObjectByName("frame-1");
-    const frame2 = splineApp?.findObjectByName("frame-2");
+  // Bongo Cat Animation - REMOVED
+  // const getBongoAnimation = () => {
+  //   const framesParent = splineApp?.findObjectByName("bongo-cat");
+  //   const frame1 = splineApp?.findObjectByName("frame-1");
+  //   const frame2 = splineApp?.findObjectByName("frame-2");
 
-    if (!frame1 || !frame2 || !framesParent) {
-      return { start: () => { }, stop: () => { } };
-    }
+  //   if (!frame1 || !frame2 || !framesParent) {
+  //     return { start: () => { }, stop: () => { } };
+  //   }
 
-    let interval: NodeJS.Timeout;
-    const start = () => {
-      let i = 0;
-      framesParent.visible = true;
-      interval = setInterval(() => {
-        if (i % 2) {
-          frame1.visible = false;
-          frame2.visible = true;
-        } else {
-          frame1.visible = true;
-          frame2.visible = false;
-        }
-        i++;
-      }, 100);
-    };
-    const stop = () => {
-      clearInterval(interval);
-      framesParent.visible = false;
-      frame1.visible = false;
-      frame2.visible = false;
-    };
-    return { start, stop };
-  };
+  //   let interval: NodeJS.Timeout;
+  //   const start = () => {
+  //     let i = 0;
+  //     framesParent.visible = true;
+  //     interval = setInterval(() => {
+  //       if (i % 2) {
+  //         frame1.visible = false;
+  //         frame2.visible = true;
+  //       } else {
+  //         frame1.visible = true;
+  //         frame2.visible = false;
+  //       }
+  //       i++;
+  //     }, 100);
+  //   };
+  //   const stop = () => {
+  //     clearInterval(interval);
+  //     framesParent.visible = false;
+  //     frame1.visible = false;
+  //     frame2.visible = false;
+  //   };
+  //   return { start, stop };
+  // };
 
   const getKeycapsAnimation = () => {
     if (!splineApp) return { start: () => { }, stop: () => { } };
@@ -281,10 +286,10 @@ const AnimatedBackground = () => {
     if (!splineApp) return;
     handleSplineInteractions();
     setupScrollAnimations();
-    bongoAnimationRef.current = getBongoAnimation();
+    // bongoAnimationRef.current = getBongoAnimation(); // REMOVED
     keycapAnimationsRef.current = getKeycapsAnimation();
     return () => {
-      bongoAnimationRef.current?.stop()
+      // bongoAnimationRef.current?.stop() // REMOVED
       keycapAnimationsRef.current?.stop()
     }
 
@@ -387,14 +392,14 @@ const AnimatedBackground = () => {
         teardownKeyboard?.pause();
       }
 
-      // Handle Bongo Cat
-      if (activeSection === "projects") {
-        await sleep(300);
-        bongoAnimationRef.current?.start();
-      } else {
-        await sleep(200);
-        bongoAnimationRef.current?.stop();
-      }
+      // Handle Bongo Cat - REMOVED
+      // if (activeSection === "projects") {
+      //   await sleep(300);
+      //   bongoAnimationRef.current?.start();
+      // } else {
+      //   await sleep(200);
+      //   bongoAnimationRef.current?.stop();
+      // }
 
       // Handle Contact Section Animations
       if (activeSection === "contact") {
@@ -427,15 +432,20 @@ const AnimatedBackground = () => {
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <Spline
-        className="w-full h-full fixed"
-        ref={splineContainer}
-        onLoad={(app: Application) => {
-          setSplineApp(app);
-          bypassLoading();
-        }}
-        scene="/assets/skills-keyboard.spline"
-      />
+      <div
+        className="w-full h-full fixed inset-0"
+        style={{ opacity: (activeSection === "skills" || activeSection === "hero" || activeSection === "contact") ? 1 : 0.5 }}
+      >
+        <Spline
+          className="w-full h-full cursor-pointer"
+          ref={splineContainer}
+          onLoad={(app: Application) => {
+            setSplineApp(app);
+            bypassLoading();
+          }}
+          scene="/assets/skills-keyboard.spline"
+        />
+      </div>
     </Suspense>
   );
 };
