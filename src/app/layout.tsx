@@ -51,6 +51,8 @@ const archivoBlack = Archivo_Black({
   variable: "--font-display",
 });
 
+import { Analytics } from "@vercel/analytics/react"
+
 export default function RootLayout({
   children,
 }: {
@@ -64,7 +66,6 @@ export default function RootLayout({
           src={process.env.UMAMI_DOMAIN}
           data-website-id={process.env.UMAMI_SITE_ID}
         ></Script> */}
-        {/* <Analytics /> */}
       </head>
       <body>
         <Providers>
@@ -72,6 +73,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <AppOverlays />
+          <Analytics />
         </Providers>
       </body>
     </html>
