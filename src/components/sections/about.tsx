@@ -86,21 +86,13 @@ const AboutSection = () => {
             >
               <h1 className="text-2xl md:text-3xl mb-10 lg:md-20 text-center font-bold">About me</h1>
               <p className="mb-6 text-roboto text-sm md:text-base">
-                I specialize in building scalable web applications using the modern JavaScript stack,
-                with a strong focus on <strong>React</strong>, <strong>Next.js</strong>, and <strong>Node.js</strong>.
-                My expertise lies in crafting responsive, user-centric frontend interfaces that are both performant and accessible,
-                leveraging strict <strong>TypeScript</strong> for robust type safety.
+                I build scalable web applications and intelligent software solutions. My core stack includes <strong>React</strong>, <strong>Next.js</strong>, and <strong>Node.js</strong>, backed by <strong>TypeScript</strong> for creating robust, responsive user interfaces.
               </p>
               <p className="mb-6 text-roboto text-sm md:text-base">
-                On the backend, I design and implement secure <strong>RESTful</strong> and <strong>GraphQL APIs</strong>,
-                working with both SQL (<strong>PostgreSQL</strong>) and NoSQL (<strong>MongoDB</strong>) databases.
-                I focus on efficient data architecture and seamless integration between client and server systems.
+                Beyond the web, I leverage <strong>Python</strong> to develop <strong>AI-driven software</strong> and complex backend systems. I design seamless <strong>RESTful</strong> and <strong>GraphQL APIs</strong>, utilizing <strong>PostgreSQL</strong> and <strong>MongoDB</strong> to handle data efficiently.
               </p>
               <p className="mb-10 text-roboto text-sm md:text-base">
-                I prioritize writing clean, maintainable code and am currently exploring <strong>advanced architecture</strong> and <strong>Docker</strong> to broaden my capabilities.
-              </p>
-              <p className="mb-10 text-roboto text-sm md:text-base">
-                Beyond technical skills, I am passionate about understanding the business impact of software. I thrive in dynamic environments where I can collaborate with cross-functional teams to deliver solutions that truly help users. I am constantly seeking to refine my craft, staying updated with industry trends to build software that is not only functional but also future-proof.
+                I prioritize writing clean, maintainable code and am constantly exploring <strong>advanced architecture</strong> and <strong>Docker</strong>. My goal is to build software that is not just functional, but truly <strong>future-proof</strong>.
               </p>
             </div>
           </main>
