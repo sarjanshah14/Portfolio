@@ -86,13 +86,13 @@ const AboutSection = () => {
             >
               <h1 className="text-2xl md:text-3xl mb-10 lg:md-20 text-center font-bold">About me</h1>
               <p className="mb-6 text-roboto text-sm md:text-base">
-                I am a <strong className="text-brand">Full Stack Developer</strong> specializing in building <strong className="text-brand">scalable web applications</strong> and <strong className="text-brand">cloud-native solutions</strong>. My expertise lies in the <strong className="text-brand">MERN Stack</strong> and <strong className="text-brand">Next.js</strong>, leveraging <strong className="text-brand">TypeScript</strong> to architect performant, <strong className="text-brand">accessible</strong>, and type-safe frontends.
+                I am a <strong className="text-brand">Full Stack Developer</strong> driven by the challenge of building scalable, high-performance web applications. I specialize in the <strong className="text-brand">MERN Stack</strong> and <strong className="text-brand">Next.js</strong>, using <strong className="text-brand">TypeScript</strong> to create interfaces that are not just functional, but intuitive and accessible for every user.
               </p>
               <p className="mb-6 text-roboto text-sm md:text-base">
-                I engineer robust <strong className="text-brand">REST</strong> and <strong className="text-brand">GraphQL APIs</strong>, utilizing <strong className="text-brand">Python</strong> to integrate <strong className="text-brand">AI/ML models</strong> into production environments. My backend proficiency spans <strong className="text-brand">PostgreSQL</strong> and <strong className="text-brand">MongoDB</strong>, ensuring secure and efficient <strong className="text-brand">database management</strong> and <strong className="text-brand">system design</strong>.
+                My expertise extends to the backend, where I engineer secure <strong className="text-brand">REST</strong> and GraphQL APIs. I leverage <strong className="text-brand">Python</strong> to seamlessly integrate <strong className="text-brand">AI/ML models</strong> into production systems, while ensuring efficient data management with PostgreSQL and MongoDB.
               </p>
               <p className="mb-10 text-roboto text-sm md:text-base">
-                Beyond coding, I focus on <strong className="text-brand">CI/CD</strong> workflows, <strong className="text-brand">Docker</strong> containerization, and <strong className="text-brand">Microservices</strong>, aiming to deliver <strong className="text-brand">future-proof software</strong> that drives real <strong className="text-brand">business impact</strong>. I thrive in <strong className="text-brand">Agile</strong> environments, collaborating to solve complex technical challenges.
+                I believe in <strong className="text-brand">future-proof software</strong>. I implement <strong className="text-brand">CI/CD</strong> pipelines and <strong className="text-brand">Docker</strong> containerization to streamline deployment, ensuring that the solutions I deliver drive real business impact and adapt to changing needs in dynamic <strong className="text-brand">Agile</strong> environments.
               </p>
             </div>
           </main>
