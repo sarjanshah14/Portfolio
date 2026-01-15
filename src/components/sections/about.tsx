@@ -86,13 +86,13 @@ const AboutSection = () => {
             >
               <h1 className="text-2xl md:text-3xl mb-10 lg:md-20 text-center font-bold">About me</h1>
               <p className="mb-6 text-roboto text-sm md:text-base">
-                I build scalable web applications and intelligent software solutions. My core stack includes <strong>React</strong>, <strong>Next.js</strong>, and <strong>Node.js</strong>, backed by <strong>TypeScript</strong> for creating robust, responsive user interfaces.
+                I am a <strong>Full Stack Developer</strong> specializing in building <strong>scalable web applications</strong> and <strong>cloud-native solutions</strong>. My expertise lies in the <strong>MERN Stack</strong> and <strong>Next.js</strong>, leveraging <strong>TypeScript</strong> to architect performant, <strong>accessible</strong>, and type-safe frontends.
               </p>
               <p className="mb-6 text-roboto text-sm md:text-base">
-                Beyond the web, I leverage <strong>Python</strong> to develop <strong>AI-driven software</strong> and complex backend systems. I design seamless <strong>RESTful</strong> and <strong>GraphQL APIs</strong>, utilizing <strong>PostgreSQL</strong> and <strong>MongoDB</strong> to handle data efficiently.
+                I engineer robust <strong>REST</strong> and <strong>GraphQL APIs</strong>, utilizing <strong>Python</strong> to integrate <strong>AI/ML models</strong> into production environments. My backend proficiency spans <strong>PostgreSQL</strong> and <strong>MongoDB</strong>, ensuring secure and efficient <strong>database management</strong> and <strong>system design</strong>.
               </p>
               <p className="mb-10 text-roboto text-sm md:text-base">
-                I prioritize writing clean, maintainable code and am constantly exploring <strong>advanced architecture</strong> and <strong>Docker</strong>. My goal is to build software that is not just functional, but truly <strong>future-proof</strong>.
+                Beyond coding, I focus on <strong>CI/CD</strong> workflows, <strong>Docker</strong> containerization, and <strong>Microservices</strong>, aiming to deliver <strong>future-proof software</strong> that drives real <strong>business impact</strong>. I thrive in <strong>Agile</strong> environments, collaborating to solve complex technical challenges.
               </p>
             </div>
           </main>
