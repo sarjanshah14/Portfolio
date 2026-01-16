@@ -44,7 +44,7 @@ const AchievementsSection = () => {
                         </div>
 
                         {/* Content Side - Takes 3/5 (60%) space */}
-                        <CardContent className="p-6 lg:p-10 flex flex-col justify-center relative lg:col-span-3">
+                        <CardContent className="px-6 pt-6 pb-2 lg:p-10 flex flex-col justify-center relative lg:col-span-3">
                             <div className="absolute top-0 right-0 p-6 opacity-10">
                                 <Trophy size={120} />
                             </div>
