@@ -22,6 +22,11 @@ const links: Link[] = [
     thumbnail: '/assets/nav-link-previews/projects.png'
   },
   {
+    title: 'Achievements',
+    href: '/#achievements',
+    thumbnail: '/assets/nav-link-previews/achievements.png' // User said they will add this later, placeholder for now is fine or just reuse logic if handled dynamically, but here hardcoded path is standard pattern in this file.
+  },
+  {
     title: 'Experience',
     href: '/#experience',
     thumbnail: '/assets/nav-link-previews/experience.png'
