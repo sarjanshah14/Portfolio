@@ -19,7 +19,7 @@ const AchievementsSection = () => {
                 <Card className="bg-card/50 backdrop-blur-sm border-border overflow-hidden group hover:border-primary/50 transition-all duration-500">
                     <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
                         {/* Visual Side - Takes 2/5 (40%) space */}
-                        <div className="relative h-full min-h-[300px] overflow-hidden lg:col-span-2">
+                        <div className="relative h-full min-h-[550px] overflow-hidden lg:col-span-2">
                             <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent z-10" />
 
                             {/* Image Grid */}
