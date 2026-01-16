@@ -19,12 +19,12 @@ const AchievementsSection = () => {
                 <Card className="bg-card/50 backdrop-blur-sm border-border overflow-hidden group hover:border-primary/50 transition-all duration-500">
                     <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
                         {/* Visual Side - Takes 2/5 (40%) space */}
-                        <div className="relative h-[300px] lg:h-full min-h-[400px] overflow-hidden lg:col-span-2">
+                        <div className="relative h-full min-h-[300px] overflow-hidden lg:col-span-2">
                             <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent z-10" />
 
                             {/* Image Grid */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 h-full gap-2 p-2 bg-muted/20">
-                                <div className="relative rounded-lg overflow-hidden h-full">
+                            <div className="grid grid-cols-1 grid-rows-2 h-full gap-2 p-2 bg-muted/20">
+                                <div className="relative rounded-lg overflow-hidden w-full h-full">
                                     <Image
                                         src="/assets/hackathon/hack1.png"
                                         alt="Hackovate Stage Moment"
@@ -32,7 +32,7 @@ const AchievementsSection = () => {
                                         className="object-cover object-top transition-transform duration-700 group-hover:scale-110"
                                     />
                                 </div>
-                                <div className="relative rounded-lg overflow-hidden h-full">
+                                <div className="relative rounded-lg overflow-hidden w-full h-full">
                                     <Image
                                         src="/assets/hackathon/hack2.png"
                                         alt="Winning Moment"
@@ -44,7 +44,7 @@ const AchievementsSection = () => {
                         </div>
 
                         {/* Content Side - Takes 3/5 (60%) space */}
-                        <CardContent className="p-8 lg:p-12 flex flex-col justify-center relative lg:col-span-3">
+                        <CardContent className="p-6 lg:p-10 flex flex-col justify-center relative lg:col-span-3">
                             <div className="absolute top-0 right-0 p-6 opacity-10">
                                 <Trophy size={120} />
                             </div>
