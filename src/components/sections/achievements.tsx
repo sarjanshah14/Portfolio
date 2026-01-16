@@ -29,7 +29,7 @@ const AchievementsSection = () => {
                                         src="/assets/hackathon/hack1.png"
                                         alt="Hackovate Stage Moment"
                                         fill
-                                        className="object-contain object-top transition-transform duration-700 hover:scale-110"
+                                        className="object-contain object-top transition-transform duration-700 group-hover:scale-125"
                                     />
                                 </div>
                                 <div className="relative rounded-lg overflow-hidden w-full h-full bg-black/5">
@@ -37,7 +37,7 @@ const AchievementsSection = () => {
                                         src="/assets/hackathon/hack2.png"
                                         alt="Winning Moment"
                                         fill
-                                        className="object-contain object-bottom transition-transform duration-700 hover:scale-110"
+                                        className="object-contain object-bottom transition-transform duration-700 group-hover:scale-125"
                                     />
                                 </div>
                             </div>
