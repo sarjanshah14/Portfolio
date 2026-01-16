@@ -17,70 +17,75 @@ const AchievementsSection = () => {
 
             <div className="grid grid-cols-1 gap-8 mt-12">
                 <Card className="bg-card/50 backdrop-blur-sm border-border overflow-hidden group hover:border-primary/50 transition-all duration-500">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                        {/* Visual Side */}
-                        <div className="relative h-[300px] lg:h-full min-h-[400px] overflow-hidden">
+                    <div className="grid grid-cols-1 lg:grid-cols-5 gap-0">
+                        {/* Visual Side - Takes 2/5 (40%) space */}
+                        <div className="relative h-[300px] lg:h-full min-h-[400px] overflow-hidden lg:col-span-2">
                             <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent z-10" />
 
                             {/* Image Grid */}
-                            <div className="grid grid-cols-2 h-full gap-2 p-2 bg-muted/20">
-                                <div className="relative rounded-lg overflow-hidden">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 h-full gap-2 p-2 bg-muted/20">
+                                <div className="relative rounded-lg overflow-hidden h-full">
                                     <Image
                                         src="/assets/hackathon/hack1.png"
                                         alt="Hackovate Stage Moment"
                                         fill
-                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                        className="object-cover object-top transition-transform duration-700 group-hover:scale-110"
                                     />
                                 </div>
-                                <div className="relative rounded-lg overflow-hidden">
+                                <div className="relative rounded-lg overflow-hidden h-full">
                                     <Image
                                         src="/assets/hackathon/hack2.png"
                                         alt="Winning Moment"
                                         fill
-                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                        className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
                                     />
                                 </div>
                             </div>
                         </div>
 
-                        {/* Content Side */}
-                        <CardContent className="p-8 lg:p-12 flex flex-col justify-center relative">
+                        {/* Content Side - Takes 3/5 (60%) space */}
+                        <CardContent className="p-8 lg:p-12 flex flex-col justify-center relative lg:col-span-3">
                             <div className="absolute top-0 right-0 p-6 opacity-10">
                                 <Trophy size={120} />
                             </div>
 
-                            <div className="space-y-6 relative z-10">
-                                <div className="space-y-2">
+                            <div className="space-y-8 relative z-10">
+                                <div className="space-y-4">
                                     <div className="flex items-center gap-3 text-primary mb-2">
                                         <Trophy className="w-5 h-5" />
                                         <span className="font-mono text-sm font-bold uppercase tracking-wider">2nd Place Winner</span>
                                     </div>
-                                    <h3 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
+                                    <h3 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
                                         Hackovate'25
                                     </h3>
-                                    <p className="text-lg text-muted-foreground font-medium">
+                                    <p className="text-xl text-muted-foreground font-medium">
                                         AI Hackathon organized by LJ University
                                     </p>
                                 </div>
 
                                 <div className="flex flex-wrap gap-3">
-                                    <Badge variant="secondary" className="px-4 py-1 text-base">
+                                    <Badge variant="secondary" className="px-4 py-1.5 text-base">
                                         ₹25,000 Prize
                                     </Badge>
-                                    <Badge variant="outline" className="px-4 py-1 text-base gap-2">
+                                    <Badge variant="outline" className="px-4 py-1.5 text-base gap-2">
                                         <Calendar className="w-4 h-4" /> 2025
                                     </Badge>
-                                    <Badge variant="outline" className="px-4 py-1 text-base gap-2">
+                                    <Badge variant="outline" className="px-4 py-1.5 text-base gap-2">
                                         <Users className="w-4 h-4" /> 800+ Participants
                                     </Badge>
-                                    <Badge variant="outline" className="px-4 py-1 text-base gap-2">
+                                    <Badge variant="outline" className="px-4 py-1.5 text-base gap-2">
                                         <Users className="w-4 h-4" /> 250+ Teams
                                     </Badge>
                                 </div>
 
-                                <p className="text-muted-foreground leading-relaxed">
-                                    Secured 2nd position in a highly competitive AI hackathon. Developed <strong>Sensor Guard</strong>, an innovative solution that showcased advanced problem-solving and technical execution.
-                                </p>
+                                <div className="space-y-4 text-muted-foreground leading-relaxed text-lg">
+                                    <p>
+                                        Secured 2nd position in a highly competitive AI hackathon featuring top talent from across the region.
+                                    </p>
+                                    <p>
+                                        We developed <strong>Sensor Guard</strong>, an innovative AI-driven security solution designed to enhance surveillance capabilities. Our project utilized advanced sensor integration and real-time data processing to detect anomalies with high precision, showcasing our ability to solve complex real-world problems under tight deadlines.
+                                    </p>
+                                </div>
 
                                 <div className="pt-6 border-t border-border/50">
                                     <h4 className="text-sm font-semibold text-foreground mb-4 uppercase tracking-wider flex items-center gap-2">
