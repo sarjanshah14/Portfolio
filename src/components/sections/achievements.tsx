@@ -23,7 +23,7 @@ const AchievementsSection = () => {
                             <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent z-10" />
 
                             {/* Image Grid */}
-                            <div className="grid grid-cols-1 grid-rows-2 h-full gap-4 p-4 bg-muted/20">
+                            <div className="grid grid-cols-2 grid-rows-1 lg:grid-cols-1 lg:grid-rows-2 h-full gap-4 p-4 bg-muted/20">
                                 <div className="relative rounded-lg overflow-hidden w-full h-full bg-black/5">
                                     <Image
                                         src="/assets/hackathon/hack1.png"
