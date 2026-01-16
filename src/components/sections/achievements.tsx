@@ -29,7 +29,7 @@ const AchievementsSection = () => {
                                         src="/assets/hackathon/hack1.png"
                                         alt="Hackovate Stage Moment"
                                         fill
-                                        className="object-contain object-top transition-transform duration-700 hover:scale-105"
+                                        className="object-contain object-top transition-transform duration-700 hover:scale-110"
                                     />
                                 </div>
                                 <div className="relative rounded-lg overflow-hidden w-full h-full bg-black/5">
@@ -37,7 +37,7 @@ const AchievementsSection = () => {
                                         src="/assets/hackathon/hack2.png"
                                         alt="Winning Moment"
                                         fill
-                                        className="object-contain object-bottom transition-transform duration-700 hover:scale-105"
+                                        className="object-contain object-bottom transition-transform duration-700 hover:scale-110"
                                     />
                                 </div>
                             </div>
@@ -83,7 +83,7 @@ const AchievementsSection = () => {
                                         Secured 2nd position in a highly competitive AI hackathon featuring top talent from across the region.
                                     </p>
                                     <p>
-                                        We developed <strong>Sensor Guard</strong>, an innovative AI-driven security solution designed to enhance surveillance capabilities. Our project utilized advanced sensor integration and real-time data processing to detect anomalies with high precision, showcasing our ability to solve complex real-world problems under tight deadlines.
+                                        We developed <strong>Sensor Guard</strong>, an innovative AI-driven security solution designed to enhance surveillance capabilities. Our project utilized advanced sensor integration and real-time data processing (trained on dummy data) to detect anomalies with high precision, showcasing our ability to solve complex real-world problems.
                                     </p>
                                 </div>
 
