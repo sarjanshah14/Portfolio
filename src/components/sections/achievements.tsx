@@ -23,21 +23,21 @@ const AchievementsSection = () => {
                             <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent z-10" />
 
                             {/* Image Grid */}
-                            <div className="grid grid-cols-1 grid-rows-2 h-full gap-2 p-2 bg-muted/20">
-                                <div className="relative rounded-lg overflow-hidden w-full h-full">
+                            <div className="grid grid-cols-1 grid-rows-2 h-full gap-4 p-4 bg-muted/20">
+                                <div className="relative rounded-lg overflow-hidden w-full h-full bg-black/5">
                                     <Image
                                         src="/assets/hackathon/hack1.png"
                                         alt="Hackovate Stage Moment"
                                         fill
-                                        className="object-cover object-top transition-transform duration-700 group-hover:scale-110"
+                                        className="object-contain object-top transition-transform duration-700 hover:scale-105"
                                     />
                                 </div>
-                                <div className="relative rounded-lg overflow-hidden w-full h-full">
+                                <div className="relative rounded-lg overflow-hidden w-full h-full bg-black/5">
                                     <Image
                                         src="/assets/hackathon/hack2.png"
                                         alt="Winning Moment"
                                         fill
-                                        className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
+                                        className="object-contain object-bottom transition-transform duration-700 hover:scale-105"
                                     />
                                 </div>
                             </div>
