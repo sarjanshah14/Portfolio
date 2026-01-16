@@ -8,7 +8,7 @@ import { Trophy, Users, User, Calendar } from "lucide-react";
 
 const AchievementsSection = () => {
     return (
-        <SectionWrapper id="achievements" className="max-w-7xl mx-auto py-20">
+        <SectionWrapper id="achievements" className="max-w-7xl mx-auto py-20 px-4 md:px-0">
             <SectionHeader
                 id="achievements"
                 title="Achievements"
@@ -23,8 +23,8 @@ const AchievementsSection = () => {
                             <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent z-10" />
 
                             {/* Image Grid */}
-                            <div className="grid grid-cols-2 grid-rows-2 h-full gap-2 p-2 bg-muted/20">
-                                <div className="row-span-2 relative rounded-lg overflow-hidden">
+                            <div className="grid grid-cols-2 h-full gap-2 p-2 bg-muted/20">
+                                <div className="relative rounded-lg overflow-hidden">
                                     <Image
                                         src="/assets/hackathon/hack1.png"
                                         alt="Hackovate Stage Moment"
@@ -36,14 +36,6 @@ const AchievementsSection = () => {
                                     <Image
                                         src="/assets/hackathon/hack2.png"
                                         alt="Winning Moment"
-                                        fill
-                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
-                                    />
-                                </div>
-                                <div className="relative rounded-lg overflow-hidden">
-                                    <Image
-                                        src="/assets/hackathon/hack3.png"
-                                        alt="With Mentor"
                                         fill
                                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                                     />
@@ -64,10 +56,10 @@ const AchievementsSection = () => {
                                         <span className="font-mono text-sm font-bold uppercase tracking-wider">2nd Place Winner</span>
                                     </div>
                                     <h3 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
-                                        Hackovate Hackathon
+                                        Hackovate'25
                                     </h3>
                                     <p className="text-lg text-muted-foreground font-medium">
-                                        Organized by College
+                                        AI Hackathon organized by LJ University
                                     </p>
                                 </div>
 
@@ -76,17 +68,23 @@ const AchievementsSection = () => {
                                         ₹25,000 Prize
                                     </Badge>
                                     <Badge variant="outline" className="px-4 py-1 text-base gap-2">
-                                        <Calendar className="w-4 h-4" /> 2024
+                                        <Calendar className="w-4 h-4" /> 2025
+                                    </Badge>
+                                    <Badge variant="outline" className="px-4 py-1 text-base gap-2">
+                                        <Users className="w-4 h-4" /> 800+ Participants
+                                    </Badge>
+                                    <Badge variant="outline" className="px-4 py-1 text-base gap-2">
+                                        <Users className="w-4 h-4" /> 250+ Teams
                                     </Badge>
                                 </div>
 
                                 <p className="text-muted-foreground leading-relaxed">
-                                    Secured 2nd position in a highly competitive hackathon. Recognized for innovative problem-solving and technical execution.
+                                    Secured 2nd position in a highly competitive AI hackathon. Developed <strong>Sensor Guard</strong>, an innovative solution that showcased advanced problem-solving and technical execution.
                                 </p>
 
                                 <div className="pt-6 border-t border-border/50">
                                     <h4 className="text-sm font-semibold text-foreground mb-4 uppercase tracking-wider flex items-center gap-2">
-                                        <Users className="w-4 h-4" /> Team & Mentorship
+                                        <Users className="w-4 h-4" /> Team
                                     </h4>
                                     <div className="flex flex-col gap-3">
                                         <div className="flex items-center gap-3 p-3 rounded-lg bg-muted/30 border border-border/50">
@@ -96,15 +94,6 @@ const AchievementsSection = () => {
                                             <div>
                                                 <p className="font-medium text-foreground">Sneh Patel</p>
                                                 <p className="text-xs text-muted-foreground">Teammate</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex items-center gap-3 p-3 rounded-lg bg-muted/30 border border-border/50">
-                                            <div className="bg-primary/10 p-2 rounded-full">
-                                                <User className="w-4 h-4 text-primary" />
-                                            </div>
-                                            <div>
-                                                <p className="font-medium text-foreground">Mr. Devang Shah</p>
-                                                <p className="text-xs text-muted-foreground">Mentor & Guide</p>
                                             </div>
                                         </div>
                                     </div>
