@@ -471,7 +471,7 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono text-2xl text-center">
-            LetsPark (PleaseLetMePark)
+            LetsPark : Parking Spot Finder
           </TypographyP>
           <TypographyP className="font-mono text-center mb-4">
             A full‑stack parking booking platform designed to facilitate seamless reservations of parking spaces with secure payments and SMS notifications.
