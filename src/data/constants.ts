@@ -24,6 +24,15 @@ export enum SkillNames {
   NUMPY = "numpy",
   SEABORN = "seaborn",
   PANDAS = "pandas",
+  // AI/ML
+  SKLEARN = "sklearn",
+  DOCKER = "docker",
+  GCP = "gcp",
+  FASTAPI = "fastapi",
+  DJANGO = "django",
+  PYTORCH = "pytorch",
+  SQL = "sql",
+  OCI = "oci",
 }
 export type Skill = {
   id: number;
@@ -70,7 +79,7 @@ export const SKILLS: Record<SkillNames, Skill> = {
   [SkillNames.REACT]: {
     id: 5,
     name: "react",
-    label: "React",
+    label: "React.js",
     shortDescription: "Component-based UI library for building user interfaces",
     color: "#61dafb",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
@@ -237,6 +246,74 @@ export const SKILLS: Record<SkillNames, Skill> = {
     color: "#150458",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg",
   },
+  [SkillNames.SKLEARN]: {
+    id: 26,
+    name: "sklearn",
+    label: "scikit-learn",
+    shortDescription:
+      "Machine learning library for Python — classification, regression, clustering, and model evaluation",
+    color: "#F7931E",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg",
+  },
+  [SkillNames.DOCKER]: {
+    id: 27,
+    name: "docker",
+    label: "Docker",
+    shortDescription: "Containerization platform for consistent application deployment",
+    color: "#2496ED",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  },
+  [SkillNames.GCP]: {
+    id: 28,
+    name: "gcp",
+    label: "Google Cloud",
+    shortDescription:
+      "Google Cloud Platform — Speech-to-Text, Vision API, Vertex AI, Cloud Storage",
+    color: "#4285F4",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+  },
+  [SkillNames.FASTAPI]: {
+    id: 29,
+    name: "fastapi",
+    label: "FastAPI",
+    shortDescription: "High-performance async Python web framework for building REST APIs",
+    color: "#009688",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
+  },
+  [SkillNames.DJANGO]: {
+    id: 30,
+    name: "django",
+    label: "Django",
+    shortDescription: "Batteries-included Python web framework with ORM and REST support",
+    color: "#092E20",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
+  },
+  [SkillNames.PYTORCH]: {
+    id: 31,
+    name: "pytorch",
+    label: "PyTorch",
+    shortDescription:
+      "Deep learning framework for model training with FP16/BF16 mixed-precision support",
+    color: "#EE4C2C",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg",
+  },
+  [SkillNames.SQL]: {
+    id: 32,
+    name: "sql",
+    label: "SQL",
+    shortDescription: "Structured Query Language for relational database management",
+    color: "#336791",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  },
+  [SkillNames.OCI]: {
+    id: 33,
+    name: "oci",
+    label: "Oracle Cloud",
+    shortDescription:
+      "Oracle Cloud Infrastructure — certified AI Foundations Associate (Sep. 2025)",
+    color: "#F80000",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg",
+  },
 };
 
 export type Experience = {
@@ -245,6 +322,7 @@ export type Experience = {
   endDate: string;
   title: string;
   company: string;
+  location: string;
   description: string[];
   skills: SkillNames[];
 };
@@ -252,23 +330,42 @@ export type Experience = {
 export const EXPERIENCE: Experience[] = [
   {
     id: 1,
-    startDate: "Oct 2025",
+    startDate: "Apr 2026",
     endDate: "Present",
-    title: "Software Developer",
-    company: "Navneet Publication House",
+    title: "AI Engineer Intern",
+    company: "eInfochips – An Arrow Company",
+    location: "Ahmedabad, Gujarat",
     description: [
-      "Developing scalable applications using Python, integrating cutting-edge AI and ML technologies to solve complex business problems.",
-      "Implementing robust speech-to-text and OCR solutions for automated document processing and data extraction.",
-      "Leveraging Google Cloud Console to manage cloud-based services, ensuring high availability and scalable infrastructure.",
-      "Creating and maintaining secure API integrations and comprehensive documentation to streamline development workflows.",
-      "Optimizing data processing pipelines for improved performance and efficiency using advanced data analysis tools.",
+      "Executing parameter-efficient LLM fine-tuning using QLoRA and LoRA with FP16/BF16 mixed-precision training to adapt large language models on domain-specific semiconductor datasets.",
+      "Implementing transformer architecture internals — attention mechanisms, tokenization pipelines, and model evaluation metrics — within a production-grade semiconductor AI environment.",
     ],
     skills: [
       SkillNames.PYTHON,
+      SkillNames.PYTORCH,
       SkillNames.GIT,
       SkillNames.GITHUB,
-      SkillNames.NUMPY,
+      SkillNames.GCP,
+    ],
+  },
+  {
+    id: 2,
+    startDate: "Oct 2025",
+    endDate: "Mar 2026",
+    title: "Software Developer Intern",
+    company: "Navneet Education Limited",
+    location: "Ahmedabad, Gujarat",
+    description: [
+      "Engineered a Speech-to-Text voice logging system on GCP, converting spoken product codes and quantities into structured inventory records — eliminating manual data entry for warehouse teams.",
+      "Built an automated invoice OCR pipeline using GCP Vision API, extracting and structuring billing data from physical documents for finance operations.",
+      "Developed an internal RAG chatbot using Vertex AI Search and Discovery Engine API, enabling natural language querying over proprietary product catalogs and internal documentation.",
+    ],
+    skills: [
+      SkillNames.PYTHON,
+      SkillNames.GCP,
+      SkillNames.DJANGO,
       SkillNames.PANDAS,
+      SkillNames.NUMPY,
+      SkillNames.GIT,
     ],
   },
 ];
@@ -289,4 +386,3 @@ export const themeDisclaimers = {
     "Dark mode on! Finally, someone who understands true sophistication.",
   ],
 };
-

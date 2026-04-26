@@ -16,7 +16,7 @@ const ExperienceSection = () => {
         <SectionHeader
           id="experience"
           title="Experience"
-          desc="My professional journey."
+          desc="From GCP AI pipelines to LLM fine-tuning in production."
           className="mb-12 md:mb-20 mt-0"
         />
 
@@ -69,9 +69,12 @@ const ExperienceCard = ({
               <div className="text-sm md:text-base font-medium text-zinc-600 dark:text-muted-foreground">
                 {experience.company}
               </div>
+              <div className="text-xs text-zinc-500 dark:text-muted-foreground/70">
+                {experience.location}
+              </div>
             </div>
             <Badge variant="secondary" className="w-fit font-mono text-xs font-normal">
-              {experience.startDate} - {experience.endDate}
+              {experience.startDate} – {experience.endDate}
             </Badge>
           </div>
         </CardHeader>

@@ -53,7 +53,7 @@ const AboutSection = () => {
                 <div className="flex flex-col gap-3 lg:items-center ml-10 md:ml-20 lg:ml-0">
                   <p className="text-center text-xl">Sarjan Shah</p>
                   <div className="text-xs bg-secondary text-zinc-700 dark:text-secondary-foreground w-fit px-3 py-1 rounded-full">
-                    Software Developer
+                    AI Engineer
                   </div>
                 </div>
               </div>
@@ -86,13 +86,16 @@ const AboutSection = () => {
             >
               <h1 className="text-2xl md:text-3xl mb-10 lg:md-20 text-center font-bold">About me</h1>
               <p className="mb-6 text-roboto text-sm md:text-base">
-                I am a <strong className="text-brand">Full Stack Developer</strong> driven by the challenge of building scalable, high-performance web applications. I specialize in the <strong className="text-brand">MERN Stack</strong> and <strong className="text-brand">Next.js</strong>, using <strong className="text-brand">TypeScript</strong> to create interfaces that are not just functional, but intuitive and accessible for every user.
+                I am an <strong className="text-brand">AI Engineer</strong> building production-grade intelligent systems at the intersection of machine learning and software engineering. Currently interning at <strong className="text-brand">eInfochips – An Arrow Company</strong>, where I execute <strong className="text-brand">parameter-efficient LLM fine-tuning</strong> using QLoRA and LoRA with FP16/BF16 mixed-precision training, and implement transformer architecture internals — attention mechanisms, tokenization pipelines, and model evaluation metrics — in a real semiconductor AI environment.
               </p>
               <p className="mb-6 text-roboto text-sm md:text-base">
-                My expertise extends to the backend, where I engineer secure <strong className="text-brand">REST</strong> and GraphQL APIs. I leverage <strong className="text-brand">Python</strong> to seamlessly integrate <strong className="text-brand">AI/ML models</strong> into production systems, while ensuring efficient data management with PostgreSQL and MongoDB.
+                Previously at <strong className="text-brand">Navneet Education Limited</strong>, I engineered a <strong className="text-brand">Speech-to-Text voice logging system</strong> on GCP that eliminated manual warehouse data entry, built an <strong className="text-brand">automated invoice OCR pipeline</strong> using GCP Vision API for structured billing data extraction, and developed an <strong className="text-brand">internal RAG chatbot</strong> via Vertex AI Search and Discovery Engine API — enabling natural-language querying over proprietary product catalogs.
+              </p>
+              <p className="mb-6 text-roboto text-sm md:text-base">
+                My core technical stack spans <strong className="text-brand">Python, PyTorch, scikit-learn, Django, FastAPI</strong>, and <strong className="text-brand">Google Cloud Platform</strong> (Speech-to-Text, Vision API, Vertex AI). I hold a certification as an <strong className="text-brand">Oracle Cloud Infrastructure AI Foundations Associate</strong> and maintain a CGPA of 9.4 in B.E. Information Technology at Lok Jagruti University.
               </p>
               <p className="mb-10 text-roboto text-sm md:text-base">
-                I believe in <strong className="text-brand">future-proof software</strong>. I implement <strong className="text-brand">CI/CD</strong> pipelines and <strong className="text-brand">Docker</strong> containerization to streamline deployment, ensuring that the solutions I deliver drive real business impact and adapt to changing needs in dynamic <strong className="text-brand">Agile</strong> environments.
+                I architect AI systems end-to-end — from data ingestion and model fine-tuning through REST API integration and full-stack deployment — with deep focus on <strong className="text-brand">MLOps</strong>, <strong className="text-brand">NLP</strong>, anomaly detection, and <strong className="text-brand">Retrieval-Augmented Generation (RAG)</strong>.
               </p>
             </div>
           </main>

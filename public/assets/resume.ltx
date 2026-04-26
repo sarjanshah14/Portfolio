@@ -1,0 +1,158 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-2pt}}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Sarjan M. Shah} \\ \vspace{2pt}
+    \small
+    +91-6351-648-593 $|$
+    \href{mailto:shahsarjan968@gmail.com}{\underline{shahsarjan968@gmail.com}} $|$
+    \href{https://linkedin.com/in/sarjan-shah-3324a334b}{\underline{linkedin.com/in/sarjan-shah}} $|$
+    \href{https://sarjanshah.in}{\underline{sarjanshah.in}} \\ \vspace{2pt}
+    \small Ahmedabad, Gujarat
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Lok Jagruti University}{Ahmedabad, Gujarat}
+      {Bachelor of Engineering in Information Technology; CGPA: 9.4/10}{Sep. 2023 -- Aug. 2027}
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, JavaScript, Java, SQL, HTML/CSS} \\
+     \textbf{AI/ML}{: LLM Fine-Tuning, QLoRA, LoRA, RAG (Retrieval-Augmented Generation), Anomaly Detection, Predictive Modeling, scikit-learn, pandas, NumPy, Vertex AI, Vector Databases} \\
+     \textbf{Frameworks \& APIs}{: React.js, Django, FastAPI, Bootstrap, GCP Speech-to-Text, GCP Vision API, Vertex AI Search, Stripe API, Leaflet.js, WebSockets} \\
+     \textbf{Cloud \& DevOps}{: Google Cloud Platform, Oracle Cloud Infrastructure, Cloud Storage, Git, REST APIs, Docker} \\
+     \textbf{Domains}{: AI Engineering, NLP, MLOps, Full-Stack Development, System Design}
+    }}
+ \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {AI Engineer Intern}{Apr. 2026 -- Present}
+      {eInfochips -- An Arrow Company}{Ahmedabad, Gujarat}
+      \resumeItemListStart
+        \resumeItem{Executing \textbf{parameter-efficient LLM fine-tuning} using \textbf{QLoRA and LoRA} with FP16/BF16 mixed-precision training to adapt large language models on domain-specific datasets}
+        \resumeItem{Implementing \textbf{transformer architecture internals} -- attention mechanisms, tokenization pipelines, and model evaluation metrics -- within a production-grade semiconductor AI environment}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Developer Intern}{Oct. 2025 -- Mar. 2026}
+      {Navneet Education Limited}{Ahmedabad, Gujarat}
+      \resumeItemListStart
+        \resumeItem{Engineered a \textbf{Speech-to-Text voice logging system} on GCP, converting spoken product codes and quantities into structured inventory records -- eliminating manual data entry for warehouse teams}
+        \resumeItem{Built an \textbf{automated invoice OCR pipeline} using GCP Vision API, extracting and structuring billing data from physical documents for finance operations}
+        \resumeItem{Developed an \textbf{internal RAG chatbot} using Vertex AI Search and Discovery Engine API, enabling natural language querying over proprietary product catalogs and internal documentation}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{SensorGuard} $|$ \emph{React, Django, Python, scikit-learn, pandas, NumPy} $|$
+          \href{https://sensorcalibrationplatform-1.onrender.com/}{\underline{Live}} $|$
+          \href{https://github.com/sarjanshah14/SensorGuard}{\underline{GitHub}}}{}
+          \resumeItemListStart
+            \resumeItem{Architected an \textbf{ML-powered IoT anomaly detection system}, applying Isolation Forest and Z-score drift analysis on real-time industrial sensor streams to predict calibration failures before occurrence}
+            \resumeItem{Trained \textbf{predictive maintenance models} using scikit-learn, identifying sensor drift and voltage spikes -- reducing simulated manual inspection overhead by $\sim$40\%}
+            \resumeItem{Delivered \textbf{real-time React dashboards} with automated alert reporting; recognized as \textbf{1st Runner-Up at Hackovate LJ 2025} among 800+ participants across 250+ teams}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{LetsPark} $|$ \emph{React.js, Django, Stripe, Leaflet.js, WebSockets, Geocode API} $|$
+          \href{https://parkingspotfinder.onrender.com}{\underline{Live}} $|$
+          \href{https://github.com/sarjanshah14/Parking-App}{\underline{GitHub}}}{}
+          \resumeItemListStart
+            \resumeItem{Built a \textbf{full-stack real-time parking platform} with WebSocket-driven slot availability, Stripe payments, and geolocation-based discovery via Leaflet.js and Geocode APIs}
+            \resumeItem{Designed \textbf{role-based provider dashboards} for listing management, occupancy tracking, and revenue analytics -- backed by optimized Django REST APIs and a normalized database schema}
+            \resumeItem{Pitched at a \textbf{Shark Tank-style venture competition} -- researched India's urban parking market, modeled break-even occupancy at 28--32\%, and presented a \rupee8L funding ask at \rupee40L pre-money valuation}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements}
+    \resumeItemListStart
+      \resumeItem{\textbf{1st Runner-Up -- Hackovate LJ 2025}: Ranked 2nd among 800+ participants across 250+ teams; built and deployed SensorGuard, an ML-based industrial sensor anomaly detection platform, within the hackathon timeline}
+    \resumeItemListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+    \resumeItemListStart
+      \resumeItem{\textbf{Oracle Cloud Infrastructure AI Foundations Associate} -- Oracle (Sep. 2025)}
+    \resumeItemListEnd
+
+\end{document}
