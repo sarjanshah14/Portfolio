@@ -47,7 +47,7 @@ const AboutSection = () => {
                   <img
                     className="w-full h-full object-cover object-top scale-110 origin-top"
                     alt="me"
-                    src="/assets/me.jpg"
+                    src="/assets/IMG_3620.jpg"
                   />
                 </div>
                 <div className="flex flex-col gap-3 lg:items-center ml-10 md:ml-20 lg:ml-0">
