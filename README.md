@@ -1,125 +1,33 @@
-# 🚀 Sarjan Shah — Portfolio Website
+# Sarjan Shah — Portfolio
 
-Welcome to the repository for my personal portfolio website! This is where I showcase my skills, projects, and personality through immersive 3D animations, smooth interactions, and fluid motion. If you love creative, high-impact web experiences, you’re in the right place.
+Source for my personal site, **https://sarjanshah.in**: about, experience, projects, hackathon achievements, blog and resume.
 
-![Portfolio Preview](public/assets/seo/og-image.png)
+![Portfolio preview](public/assets/seo/og-image.png)
 
----
+## Credit
 
-## 🔥 Features
+This site is built on Naresh Khatri's open-source [3D portfolio template](https://github.com/naresh-khatri/3d-portfolio) (Next.js, Spline 3D keyboard, GSAP animations). My changes are the content and the sections around it: bio, experience, skills, projects, an achievements section for my hackathon results, photos and SEO settings, plus layout fixes for mobile. The template is MIT-licensed, © Naresh Khatri.
 
-* **3D Animations**
-  A custom interactive 3D keyboard built using **Spline**, where each key represents a skill and reveals its title and description on hover.
+## Tech
 
-* **Slick Interactions**
-  Smooth scroll, hover, and reveal animations powered by **GSAP** and **Framer Motion** for a premium feel.
+Next.js 14, React, TypeScript, Tailwind CSS, shadcn/ui, GSAP, Framer Motion, Spline, MDX for blog posts. Deployed on Vercel.
 
-* **Space-Inspired Theme**
-  Particle effects on a dark background create a cosmic environment that elevates the visual experience.
+## Where the content lives
 
-* **Fully Responsive Design**
-  Optimized for desktops, tablets, and mobile devices to ensure a consistent experience everywhere.
+```
+src/data/config.ts       name, title, social links, SEO
+src/data/constants.ts    skills and experience
+src/data/projects.tsx    project cards
+src/content/blogs/       blog posts (MDX)
+src/app/                 pages: home, about, projects, blogs, contact, resume
+public/assets/           images
+```
 
-* **Modern & Innovative UI**
-  A blend of creativity and performance-focused design, pushing the boundaries of modern web development.
+## Run it locally
 
----
+Node 18+:
 
-## 🛠️ Tech Stack
-
-### Frontend
-
-* **Next.js**
-* **React**
-* **Tailwind CSS**
-* **Shadcn UI**
-* **Aceternity UI**
-
-### Animations & 3D
-
-* **GSAP**
-* **Framer Motion**
-* **Spline Runtime**
-
-### Miscellaneous
-
-* **Resend**
-* **Socket.IO**
-* **Zod**
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-* **Node.js** (v14 or higher)
-* **npm** or **yarn**
-
-### Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/sarjanshah/portfolio.git
-   ```
-
-2. Navigate to the project directory:
-
-   ```bash
-   cd portfolio
-   ```
-
-3. Install dependencies:
-
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-4. Start the development server:
-
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-5. Open your browser and visit:
-
-   ```
-   http://localhost:3000
-   ```
-
----
-
-## 🚀 Deployment
-
-This portfolio is deployed on **Vercel**.
-
-To deploy your own version:
-
-1. Push the project to a GitHub repository.
-2. Connect the repository to Vercel.
-3. Vercel automatically builds and deploys the site.
-
----
-
-## 🤝 Contributing
-
-Contributions, suggestions, and improvements are always welcome.
-Feel free to open an issue or submit a pull request.
-
----
-
-## 📄 License
-
-This project is open source and available under the **MIT License**.
-
----
-
-### 👋 About Me
-
-I’m **Sarjan Shah**, a passionate developer focused on building visually engaging, performant, and modern web experiences.
-This portfolio reflects my skills, creativity, and approach to crafting high-quality user interfaces.
+```bash
+npm install
+npm run dev        # http://localhost:3000
+```
