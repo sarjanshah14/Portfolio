@@ -27,7 +27,7 @@ const config = {
   ],
   author: "Sarjan Shah",
   email: "shahsarjan968@gmail.com",
-  site: "https://sarjanshah.site",
+  site: "https://www.sarjanshah.in",
 
   // for github stars button
   githubUsername: "sarjanshah14",
